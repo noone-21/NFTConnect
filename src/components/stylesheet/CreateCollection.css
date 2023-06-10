@@ -1,0 +1,954 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/* ///////////MAIN PAGE////////// */
+.createCollectionPage{
+    position: absolute;
+}
+.createCollectionNavigation{
+    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    position: relative;
+    color: gray;
+}
+.createCollectionNavigation a{
+    text-decoration: none;
+    color: gray;
+}
+.createCollectionNavigation i{
+    margin-left: 5px;
+    margin-top: 4px;
+}
+.createCollectionNavigation p{
+    position: relative;
+    bottom: 15px;
+    margin-left: 5px;
+}
+
+
+/* ///////////MAIN HEADING//////////// */
+.createCollectionHeading{
+    position: relative;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 250px;
+}
+.required{
+    position: relative;
+    /* top: 50px; */
+    bottom: 40px;
+    font-weight: lighter;
+    color: gray;
+    margin-left: 260px;
+}
+.sterric{
+    position: relative;
+    margin-left: 250px;
+    color: crimson;
+}
+
+
+/* ////////////LOGO IMAGE////////// */
+.createCollectionLogoImgTitle{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 30px;
+}
+#sterricI{
+    position: relative;
+    margin-left: 90px;
+    bottom: 30px;
+    color: crimson;
+}
+.imgDesc{
+    position: relative;
+    /* top: 50px; */
+    bottom: 70px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.createCollectionLogoImg{
+    margin-left: 250px;
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px dotted #000;
+    overflow: hidden;
+}
+#logoImg{
+    width: 120px;
+    height: 120px;
+}
+.createCollectionLogoImg:hover{
+    background-color: gray;
+}
+
+
+/* ///////////FEATURED IMAGE///////////////// */
+.createCollectionFtrImgTitle{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 30px;
+}
+.imgDesc2{
+    position: relative;
+    /* top: 50px; */
+    bottom: 20px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.createCollectionFtrImg {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted #000;
+    border-radius: 10px;
+    bottom: 10px;
+}
+.createCollectionFtrImg:hover{
+    background-color: gray;
+}
+#imgLogo2{
+    width: 120px;
+    height: 120px;
+}
+
+
+/* ////////////////BANNER IMAGE////////////// */
+.createCollectionBannerImgTitle{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 10px;
+}
+.imgDesc3{
+    position: relative;
+    /* top: 50px; */
+    bottom: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.createCollectionBannerImg {
+    position: relative;
+    width: 450px;
+    height: 250px;
+    margin-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted #000;
+    border-radius: 10px;
+    bottom: 10px;
+}
+.createCollectionBannerImg:hover{
+    background-color: gray;
+}
+#imgLogo3{
+    width: 150px;
+    height: 150px;
+}
+
+
+
+/* ///////////COLLECTION NAME///////////// */
+.createCollectionName{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 0px;
+}
+#sterricN{
+    position: relative;
+    margin-left: 50px;
+    bottom: 30px;
+    color: crimson;
+}
+.createCollectionInput{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 40px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 450px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+
+
+/* ///////////////COLLECTION URL////////////// */
+.createCollectionURL{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 30px;
+}
+#linkDesc{
+    position: relative;
+    /* top: 50px; */
+    bottom: 30px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.createCollectionInput2{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 30px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 450px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+
+
+/* /////////////COLLECTION DESCRIPTION///////////////// */
+.createCollectionDesc{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 25px;
+}
+#linkDesc2{
+    position: relative;
+    /* top: 50px; */
+    bottom: 30px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.createCollectionInput3{
+      position: relative;
+      margin-left: 250px;
+      resize: none;
+      border-radius: 5px;
+      bottom: 30px;
+      font-size: 17px;
+      color: black;
+      height: 100px;
+      width: 450px;
+      opacity: 0.4;
+      border-color: gray;
+      border-width: 1px;
+}
+
+
+/* ////////////////COLLECTION NFT CATEGORY////////////// */
+.createCollectionCategory{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 25px;
+}
+#categoryDesc{
+    position: relative;
+    bottom: 20px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+} 
+.nftCategoryDropdown {
+    position: relative;
+    margin-left: 250px;
+    bottom: 10px;
+    display: inline-block;
+}  
+.nftCategoryDropdownBtn {
+    background-color: #f9f9f9;
+    display: flex;
+    color: black;
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    align-items: flex-start;
+    opacity: 1;
+    border-color: gray;
+    border-width: 1px;
+    /* padding: 20px 20px; */
+    cursor: pointer;
+}
+.nftCategoryDropdownBtn p{
+    position: relative;
+    /* margin-left: 10px; */
+    bottom: 5px;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    align-items: flex-start;
+    display: flex;
+    width: 150px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.nftCategoryDropdownBtn .fa-angle-down{
+    margin-left: 260px;
+    margin-top: 15px;
+}  
+.nftCategoryDropdownBtn .fa-angle-up{
+    margin-left: 260px;
+    margin-top: 15px;
+}  
+.nftCategoryList {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}  
+.nftCategoryList p {
+    color: black;
+    position: relative;
+    cursor: pointer;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} 
+.nftCategoryListItem{
+    border-radius: 10px;
+    margin: 5px;
+} 
+.nftCategoryListItem:hover {
+    background-color: #f1f1f1;
+}  
+.nftCategoryList .selected:hover{
+background-color: gray;
+}
+.nftCategoryDropdown.active .nftCategoryList {
+    display: block;
+}
+.categoryLogo{
+    position: relative;
+    top: 0px;
+    height: 20px;
+    width: 20px;
+}
+
+
+/* ///////////COLLECTION LINKS//////////// */
+.createCollectionLinks{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 0px;
+}
+.createCollectionInput4{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 0px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 420px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+.createCollectionInput5{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 0px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 420px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+.createCollectionInput6{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 0px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 420px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+.input-container input {
+    padding-left: 30px;
+}  
+.input-container i {
+    position: absolute;
+    left: 260px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* ///////////CREATOR EARNINGS////////////// */
+.collectionCreatorEarnings{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    top: 10px;
+}
+#creatorEarningDesc{
+    position: relative;
+    top: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.createCollectionInput7{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    top: 10px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 340px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+.createCollectionInput8{
+    position: relative;
+    font-size: 17px;
+    border: none;
+    color: black;
+    height: 35px;
+    width: 50px;
+    opacity: 0.4;
+}
+#input-container {
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 5px;
+    top: 11px;
+    width: 80px;
+    background-color: white;
+    box-shadow: none;
+    border: solid 1px gray;
+}
+#input-container i {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fa-trash{
+    position: relative;
+    top: 10px;
+    height: 35px;
+}
+.categoryDelBtn{
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    box-shadow: 5px 5px 5px gray;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin-left: 680px;
+    padding: 2px;
+    bottom: 35px;
+    width: 40px;
+    height: 40px;
+}
+.addCategoryBtn{
+    position: relative;
+    top: 10px;
+    bottom: 0px;
+    width: 150px;
+    height: 40px;
+    background-color: #3AAFA9;
+    color: #FFFFFF;
+    margin-left: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none
+}
+
+
+
+/* //////////COLLECTION BLOCKCHAIN//////////// */
+.createCollectionBlockchain{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    top: 10px;
+}
+#createCollectionBlockchainDesc{
+    position: relative;
+    top: 10px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.fa-circle-info{
+    color: #000;
+    margin-left: 5px;
+}
+.blockchainInfoBtn{
+    background: none;
+    position: relative;
+    margin-left: 360px;
+    bottom: 22px;
+    border: none;
+}  
+#blockchainInfoDialogue {
+    position: relative;
+    margin-left: 400px;
+    bottom: 190px;
+    transform: translateX(-50%);
+    width: 350px;
+    padding: 10px;
+    background-color: #17252A;
+    color: #FFFFFF;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}  
+.blockchainInfoBtn:hover + #blockchainInfoDialogue, #blockchainInfoDialogue:hover {
+    opacity: 1;
+    visibility: visible;
+}
+#blockchainInfoDialogue a{
+    color: #2EEBE2;
+}
+.blockchainDropdown {
+    position: relative;
+    margin-left: 250px;
+    bottom: 130px;
+    display: inline-block;
+}  
+.blockchainDropdownBtn {
+    background-color: #f9f9f9;
+    display: flex;
+    color: black;
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    align-items: flex-start;
+    opacity: 1;
+    border-color: gray;
+    border-width: 1px;
+    /* padding: 20px 20px; */
+    cursor: pointer;
+}
+.blockchainDropdownBtn p{
+    position: relative;
+    margin-left: 10px;
+    bottom: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.blockchainDropdownBtn .fa-angle-down{
+    margin-left: 300px;
+    margin-top: 15px;
+}  
+.blockchainDropdownBtn .fa-angle-up{
+    margin-left: 300px;
+    margin-top: 15px;
+}  
+.blockchainsList {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}  
+.blockchainsList p {
+    color: black;
+    cursor: pointer;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} 
+.blockchainListItem{
+    border-radius: 10px;
+    margin: 5px;
+} 
+.blockchainListItem:hover {
+    background-color: #f1f1f1;
+}  
+.blockchainsList .selected:hover{
+background-color: gray;
+}
+.blockchainDropdown.active .blockchainsList {
+    display: block;
+}
+.blockchainLogo{
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+/* ///////////PAYMENT TOKENS//////////// */
+.createCollectionPaymentTokens{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 100px;
+}
+#createCollectionTokensDesc{
+    position: relative;
+    font-weight: lighter;
+    bottom: 100px;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.paymentTokensContainer{
+    display: flex;
+    position: relative;
+    margin-left: 250px;
+    bottom: 100px;
+}
+.paymentTokensContainer p{
+    color: #000;
+    margin-right: 5px;
+    background-color: #9c9c9c;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #f1f1f1;
+}
+.tokensDropdown {
+    position: relative;
+    margin-left: 250px;
+    bottom: 100px;
+    display: inline-block;
+}  
+.tokensDropdownBtn {
+    background-color: #f9f9f9;
+    display: flex;
+    color: black;
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    align-items: flex-start;
+    opacity: 1;
+    border-color: gray;
+    border-width: 1px;
+    /* padding: 20px 20px; */
+    cursor: pointer;
+}
+.tokensDropdownBtn p{
+    position: relative;
+    margin-left: 10px;
+    bottom: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.tokensDropdownBtn .fa-angle-down{
+    margin-left: 300px;
+    margin-top: 15px;
+}  
+.tokensDropdownBtn .fa-angle-up{
+    margin-left: 300px;
+    margin-top: 15px;
+}  
+.tokensList {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}  
+.tokensList p {
+    color: black;
+    cursor: pointer;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} 
+.tokensListItem{
+    border-radius: 10px;
+    margin: 5px;
+} 
+.tokensListItem:hover {
+    background-color: #f1f1f1;
+}  
+.tokensList .selected:hover{
+background-color: gray;
+}
+.tokensDropdown.active .tokensList {
+    display: block;
+}
+.tokensLogo{
+    position: relative;
+    top: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+/* ///////////DISPLAY THEME//////////// */
+
+
+/* ///////////EXPLICIT AND SENSITIVE//////////// */
+.collectionExplicitContent{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 80px;
+}
+#collectionExplicitContentDesc{
+    position: relative;
+    bottom: 80px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.explicitContentInfoBtn .fa-circle-info{
+    position: relative;
+    color: #000;
+    bottom: 89px;
+    margin-left: 140px;
+}
+.explicitContentInfoBtn{
+    background: none;
+    position: relative;
+    margin-left: 360px;
+    bottom: 22px;
+    border: none;
+}  
+#explicitContentInfoDialogue {
+    position: relative;
+    margin-left: 530px;
+    bottom: 260px;
+    transform: translateX(-50%);
+    width: 350px;
+    padding: 10px;
+    background-color: #17252A;
+    color: #FFFFFF;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}  
+.explicitContentInfoBtn:hover + #explicitContentInfoDialogue, #explicitContentInfoDialogue:hover {
+    opacity: 1;
+    visibility: visible;
+}
+#explicitContentInfoDialogue a{
+    color: #2EEBE2;
+}
+.explicitContentSwitch {
+    position: relative;
+    display: inline-block;
+    margin-left: 655px;
+    bottom: 255px;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .explicitContentSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .explicitContentSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .explicitContentSlider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .explicitContentSwitch input:checked + .explicitContentSlider {
+    background-color: #2196F3;
+  }
+  
+  .explicitContentSwitch input:focus + .explicitContentSlider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .explicitContentSwitch input:checked + .explicitContentSlider:before {
+    transform: translateX(20px);
+  }
+  
+  
+
+/* ///////////RANKINGS//////////// */
+.collectionRankings{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 250px;
+}
+#collectionRankingsDesc{
+    position: relative;
+    bottom: 250px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.collectionRankingInfoBtn .fa-circle-info{
+    position: relative;
+    color: #000;
+    bottom: 89px;
+    margin-left: 140px;
+}
+.collectionRankingInfoBtn{
+    background: none;
+    position: relative;
+    margin-left: 440px;
+    bottom: 192px;
+    border: none;
+}  
+#collectionRankingsInfoDialogue {
+    position: relative;
+    margin-left: 600px;
+    bottom: 390px;
+    transform: translateX(-50%);
+    width: 350px;
+    padding: 10px;
+    background-color: #17252A;
+    color: #FFFFFF;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}  
+.collectionRankingInfoBtn:hover + #collectionRankingsInfoDialogue, #collectionRankingsInfoDialogue:hover {
+    opacity: 1;
+    visibility: visible;
+}
+#collectionRankingsInfoDialogue a{
+    color: #2EEBE2;
+}
+.collectionRankingSwitch {
+    position: relative;
+    display: inline-block;
+    margin-left: 655px;
+    bottom: 385px;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .collectionRankingSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .collectionRankingSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .collectionRankingSlider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .collectionRankingSwitch input:checked + .collectionRankingSlider {
+    background-color: #2196F3;
+  }
+  
+  .collectionRankingSwitch input:focus + .collectionRankingSlider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .collectionRankingSwitch input:checked + .collectionRankingSlider:before {
+    transform: translateX(20px);
+  }
+
+/* ///////////CREATE//////////// */
+.confirmNewCollection{
+    position: relative;
+    margin-left: 250px;
+    bottom: 370px;
+}
+.createNewCollectionBtn{
+    position: relative;
+    top: 10px;
+    bottom: 0px;
+    width: 150px;
+    font-size: 15px;
+    height: 40px;
+    background-color: #3AAFA9;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    border: none
+}

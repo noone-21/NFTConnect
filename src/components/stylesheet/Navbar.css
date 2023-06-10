@@ -1,0 +1,146 @@
+.navbar{
+    /* background-color: #0d5366; */
+    display: flex;
+    width: max-content;
+    position: fixed;
+    z-index: 1;
+  }
+  .logo-title.white {
+    color: black;
+  }
+  .navbar.scrolled{
+    /* background-image: linear-gradient(180deg,#185363, #DEF2F1); */
+    background-color: #DEF2F1;
+  }
+  /* #navbar{
+    height: 70px;
+    background-color: #0d5366; 
+    background-image: linear-gradient(180deg,#185363, #DEF2F1);
+  } */
+  .search{
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    /* margin: 0px 0 0 0px; */
+
+  }
+  .search-box.scrolled{
+    background-color: #DEF2F1;
+    /* background-image: linear-gradient(180deg,#c2c2c2, #DEF2F1); */
+}
+#input{
+    height: 40px;
+    margin:0px 0 0px 26px;
+    padding: 0;
+    width: 455px;
+    font-size: medium;
+    /* border: none; */
+    border-color: #DEF2F1;
+    border-width: 0px;
+    background: none;
+  }
+  #input::placeholder {
+      font: 18px sans-serif;
+      color: black;
+      padding: 5px 0;
+  }
+  .nav-logo{
+    background-color: #1a6661;
+    margin: 0px 0px 0 5px;
+    height: 40px;
+    width: 80px;
+    padding: 5px;
+    border-radius: 30px;
+}
+.navbarLogo{
+    display: flex;
+    margin: 10px 0px 0 5px;
+}
+.logo-title{
+    margin: 8px 10px 0 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  /* .logo-title.scrolled{
+    color: #000000;
+  } */
+  a{
+    text-decoration: none;
+  }
+  .search-box i {
+    position: absolute;
+    margin: 2px 0 0 1px;
+    font-size: small;
+    color: black;
+  }
+  
+  .search-box {
+    height: 40px;
+    width: 480px;
+    margin: 15px;
+    border-radius: 10px;
+    background-color: gray;
+    opacity: 0.4;
+  }
+
+.search-box {
+  border: 1px solid gray;
+}
+
+  .search-box:hover{
+    background-color: #DEF2F1;
+    opacity: 1;
+  }
+  .search-box:hover input::placeholder{
+   color: gray;
+  }
+  .search-box:hover .fi-rs-search{
+   color: gray;
+  }
+  
+  .icon {
+    padding: 10px;
+    min-width: 10px;
+  }
+  ul{
+    padding: 0;
+    display: flex;
+    list-style: none;
+  }
+  .menu-items{
+    margin: 15px 5px 15px 10px;
+    align-content: center;
+  }
+  .menu-items li{
+    width: 70px;
+    align-items:initial;
+  }
+  .icons-menu{
+    margin: 15px 5px;
+  }
+  .icons-menu li{
+    width: 20px;
+    padding: 0 15px;
+  }
+  li{
+    margin: 10px 20px;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+  }
+  .nav-buttons{
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Signika Negative', sans-serif;
+    text-decoration: none;
+    color: #17252A;
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  input:focus{
+    outline: none;
+  }

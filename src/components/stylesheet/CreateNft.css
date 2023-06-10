@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+
+.createNftPage{
+    position: absolute;
+}
+
+.createNftHeading{
+    margin-top: 120px;
+    margin-left: 250px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.required{
+    position: relative;
+    /* top: 50px; */
+    bottom: 40px;
+    font-weight: lighter;
+    color: gray;
+    margin-left: 260px;
+}
+.sterric{
+    position: relative;
+    margin-left: 250px;
+    color: crimson;
+}
+.sterricI{
+    position: relative;
+    margin-left: 250px;
+    bottom: 30px;
+    color: crimson;
+}
+
+.createNftImgTitle{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 30px;
+}
+
+.imgDesc{
+    position: relative;
+    /* top: 50px; */
+    bottom: 70px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+
+.createNftImg {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    margin-left: 250px;
+    border: 2px dotted #000;
+    border-radius: 10px;
+    bottom: 40px;
+  }
+
+  .createNftImg:hover{
+    background-color: gray;
+  }
+
+  .imgLogo{
+    width: 150px;
+    margin: 60px 0 0 120px;
+  }
+
+  .sterricN{
+    position: relative;
+    margin-left: 50px;
+    bottom: 30px;
+    color: crimson;
+}
+
+.createNftImgName{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 30px;
+}
+.createNftInput{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 50px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 450px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.createNftLink{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 30px;
+}
+.linkDesc{
+    position: relative;
+    /* top: 50px; */
+    bottom: 30px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+
+.createNftInput2{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 30px;
+    font-size: 17px;
+    color: black;
+    height: 35px;
+    width: 450px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.createNftDesc{
+  position: relative;
+  margin-left: 250px;
+  font-size: 15px;
+  bottom: 25px;
+}
+
+.linkDesc2{
+  position: relative;
+  /* top: 50px; */
+  bottom: 30px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 250px;
+}
+.createNftInput3{
+    position: relative;
+    margin-left: 250px;
+    border-radius: 5px;
+    bottom: 30px;
+    font-size: 17px;
+    color: black;
+    height: 100px;
+    width: 450px;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.createNftCollection{
+    position: relative;
+    margin-left: 250px;
+    font-size: 15px;
+    bottom: 20px;
+}
+.collectionDesc{
+    position: relative;
+    /* top: 50px; */
+    bottom: 20px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: gray;
+    margin-left: 250px;
+}
+.fa-circle-info{
+    color: #000;
+    margin-left: 5px;
+}
+
+.createNftInfoBtn{
+    background: none;
+    position: relative;
+    margin-left: 495px;
+    bottom: 50px;
+    border: none;
+}
+  
+  .infoDialogue {
+    position: relative;
+    margin-left: 525px;
+    bottom: 190px;
+    transform: translateX(-50%);
+    /* width: 300px; */
+    padding: 10px;
+    background-color: #17252A;
+    color: #FFFFFF;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .createNftInfoBtn:hover + .infoDialogue, .infoDialogue:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .infoDialogue a{
+    color: #2EEBE2;
+  }
+
+  
+  .collectionDropdown {
+    position: relative;
+    margin-left: 250px;
+    bottom: 130px;
+    display: inline-block;
+  }
+  
+  .dropdownBtn {
+    background-color: #f9f9f9;
+    display: flex;
+    color: black;
+    height: 45px;
+    width: 450px;
+    border-radius: 5px;
+    align-items: flex-start;
+    opacity: 0.4;
+    border-color: gray;
+    border-width: 1px;
+    /* padding: 20px 20px; */
+    cursor: pointer;
+  }
+
+  .dropdownBtn p{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 14px;
+  }
+
+  .fa-angle-down{
+    margin-left: 280px;
+    margin-top: 15px;
+  }
+  
+  .nftCollectionsList {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 450px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .nftCollectionsList a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .nftCollectionsList a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .collectionDropdown.active .nftCollectionsList {
+    display: block;
+  }
+  
+  
+  
+

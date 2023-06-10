@@ -1,0 +1,61 @@
+.myCollection {
+  width: 300px;
+  height: 380px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.collection-cover-photo img {
+  position: relative;
+  width: 100%;
+  height: 150;
+}
+
+.collectionProfile {
+  padding: 20px;
+  text-align: center;
+}
+
+.collection-profile-picture {
+  position: relative;
+  bottom: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 20px;
+}
+
+.collectionName {
+  position: relative;
+  left: 40px;
+  bottom: 70px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.collection-author-name {
+  position: relative;
+  bottom: 70px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.collectionDescription {
+  position: relative;
+  bottom: 40px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.collection-num-of-items {
+  position: relative;
+  bottom: 5px;
+  font-size: 14px;
+  color: #888;
+}

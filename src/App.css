@@ -1,20 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input{
+  cursor: text;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* .App-logo {
+  height: 20vmin;
+  pointer-events: none;
+  border-radius: 20px;
+} */
+.appLogo{
+  display: flex;
+  background-color: #0d5366;
+  height: 130px;
+  width: 300px;
+  border-radius: 10px;
+}
+.logo{
+  height: 80px;
+  width: 70px;
+  margin-top: 10px;
+}
+
+/* .title{
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  font-size: 20pt;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .15em; 
+  margin-top: 30px;
+  animation: 
+    typing 4s steps(60, end)
+}
+.tagLine{
+  overflow: hidden; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  font-size: 8pt;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .15em; 
+  margin-top: 10px;
+  animation: 
+    typing 4s steps(60, end)
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: fadeIn 5s 
+  }
+} */
+.title {
+  color: #f7f7f7;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 20px 0 0 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  animation: type 5s steps(60, end) forwards;
+  -webkit-user-select: none;
+  user-select: none;
+  animation-delay: 1s;
+}
+.tagLine {
+  color: #f7f7f7;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  margin: 10px 0 0 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  opacity: 0;
+  animation: type 6s steps(60, end) forwards;
+  -webkit-user-select: none;
+  user-select: none;
+  animation-delay: 2s;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo{
+    animation: fadeIn 5s 
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color:  #0d5366;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +105,24 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
+
+@keyframes type {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    width: 30em;
+    opacity: 1;
+  }
+}
+
+
+

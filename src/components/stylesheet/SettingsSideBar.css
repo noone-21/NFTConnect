@@ -1,0 +1,27 @@
+.settings-list{
+    flex-direction: column;
+    margin-right: 10px;
+}
+.sidebar-div{
+    position: relative;
+    top: 400px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 100vh;
+    border-right: 1px solid #DADADA;
+}
+.sidebar-div>h5{
+    margin-left: 33px;
+}
+.settings-list>li > i{
+    margin: 0 20px;
+}
+.settings-list>li{
+    padding: 13px 5px;
+    margin: 0 2px 0 8px;
+}
+/* .settings-list>li:hover{
+    background-color: rgb(62, 147, 147,.2);
+    border-radius: 7px;
+} */

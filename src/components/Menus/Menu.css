@@ -1,0 +1,22 @@
+.dropdown-menu{
+    /* width: 70px; */
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: fit-content;
+    border-radius: 7px;
+    position: absolute;
+}
+.dropdown-menu button{
+    background: linear-gradient(#07D9CE, #678080); 
+    border:0;
+    padding: 18px 22px;
+}
+.dropdown-menu button:first-child{
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+.dropdown-menu button:last-child{
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
