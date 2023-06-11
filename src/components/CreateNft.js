@@ -1,9 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
 import Navbar from './Navbar'
 import './stylesheet/CreateNft.css'
 import empty from './img/empty1.png'
+import { CollectionsContext } from '../context/CollectionContext';
 
 function CreateNft() {
+
+  const [myCollections, setMyCollections] = useContext(CollectionsContext);
+
+  useEffect(() => {
+    const storedCollections = localStorage.getItem('myCollections');
+    if (storedCollections) {
+      setMyCollections(JSON.parse(storedCollections));
+    }
+  }, [setMyCollections]);
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -59,11 +69,14 @@ function CreateNft() {
             <i className="fa-solid fa-angle-down"></i>
           </button>
           <div className="nftCollectionsList">
-            {/* <a href="/">Item 1</a>
-            <a href="/">Item 2</a>
-            <a href="/">Item 3</a> */}
-           
+            <div className="nftCollectionListItem">
+            {myCollections.length === 0 && `You don't have any Collections`}
+            {myCollections.map((collection) => (
+              <p key={collection.collectionId}><img className='nftCollectionLogo' src={collection.logoImage} alt="" />{collection.Name}</p>
+            ))}
+            </div>
           </div>
+
         </div>
       </div>
     </>

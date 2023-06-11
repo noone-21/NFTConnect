@@ -3,6 +3,7 @@
 /* ///////////MAIN PAGE////////// */
 .createCollectionPage{
     position: absolute;
+    padding: 10px;
 }
 .createCollectionNavigation{
     margin-top: 100px;
@@ -30,13 +31,14 @@
 .createCollectionHeading{
     position: relative;
     margin-top: 30px;
+    bottom: 30px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 250px;
 }
 .required{
     position: relative;
     /* top: 50px; */
-    bottom: 40px;
+    bottom: 60px;
     font-weight: lighter;
     color: gray;
     margin-left: 260px;
@@ -44,6 +46,7 @@
 .sterric{
     position: relative;
     margin-left: 250px;
+    bottom: 20px;
     color: crimson;
 }
 
@@ -53,7 +56,8 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 30px;
+    /* top: 30px; */
+    bottom: 40px;
 }
 #sterricI{
     position: relative;
@@ -64,7 +68,7 @@
 .imgDesc{
     position: relative;
     /* top: 50px; */
-    bottom: 70px;
+    /* bottom: 70px; */
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -73,7 +77,7 @@
 .createCollectionLogoImg{
     margin-left: 250px;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,7 +101,7 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 30px;
+    bottom: 20px;
 }
 .imgDesc2{
     position: relative;
@@ -134,12 +138,12 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 10px;
+    /* bottom: 10px; */
 }
 .imgDesc3{
     position: relative;
     /* top: 50px; */
-    bottom: 10px;
+    /* bottom: 10px; */
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -155,7 +159,7 @@
     justify-content: center;
     border: 2px dotted #000;
     border-radius: 10px;
-    bottom: 10px;
+    /* bottom: 10px; */
 }
 .createCollectionBannerImg:hover{
     background-color: gray;
@@ -172,7 +176,8 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 0px;
+    /* bottom: 0px; */
+    top: 30px;
 }
 #sterricN{
     position: relative;
@@ -184,7 +189,8 @@
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 40px;
+    /* bottom: 40px; */
+    top: 10px;
     font-size: 17px;
     color: black;
     height: 35px;
@@ -200,12 +206,13 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 30px;
+    /* bottom: 30px; */
+    top: 30px;
 }
 #linkDesc{
     position: relative;
-    /* top: 50px; */
-    bottom: 30px;
+    top: 30px;
+    /* bottom: 30px; */
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -215,7 +222,8 @@
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 30px;
+    /* bottom: 30px; */
+    top: 40px;
     font-size: 17px;
     color: black;
     height: 35px;
@@ -231,12 +239,13 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 25px;
+    /* bottom: 25px; */
+    top: 60px;
 }
 #linkDesc2{
     position: relative;
-    /* top: 50px; */
-    bottom: 30px;
+    top: 60px;
+    /* bottom: 30px; */
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -247,7 +256,8 @@
       margin-left: 250px;
       resize: none;
       border-radius: 5px;
-      bottom: 30px;
+      /* bottom: 30px; */
+      top: 80px;
       font-size: 17px;
       color: black;
       height: 100px;
@@ -263,11 +273,13 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 25px;
+    /* bottom: 25px; */
+    top: 110px;
 }
 #categoryDesc{
     position: relative;
-    bottom: 20px;
+    /* bottom: 20px; */
+    top: 110px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -276,7 +288,8 @@
 .nftCategoryDropdown {
     position: relative;
     margin-left: 250px;
-    bottom: 10px;
+    /* bottom: 10px; */
+    top: 130px;
     display: inline-block;
 }  
 .nftCategoryDropdownBtn {
@@ -358,13 +371,14 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 0px;
+    /* bottom: 0px; */
+    top: 150px;
 }
 .createCollectionInput4{
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 0px;
+    /* bottom: 0px; */
     font-size: 17px;
     color: black;
     height: 35px;
@@ -377,7 +391,7 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 0px;
+    /* bottom: 0px; */
     font-size: 17px;
     color: black;
     height: 35px;
@@ -390,7 +404,7 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 0px;
+    /* bottom: 0px; */
     font-size: 17px;
     color: black;
     height: 35px;
@@ -401,6 +415,7 @@ background-color: gray;
 }
 .input-container {
     position: relative;
+    top: 170px;
     display: inline-block;
 }
 .input-container input {
@@ -419,11 +434,11 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    top: 10px;
+    top: 200px;
 }
 #creatorEarningDesc{
     position: relative;
-    top: 10px;
+    top: 210px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -433,7 +448,7 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    top: 10px;
+    top: 250px;
     font-size: 17px;
     color: black;
     height: 35px;
@@ -457,7 +472,7 @@ background-color: gray;
     height: 35px;
     margin-left: 10px;
     border-radius: 5px;
-    top: 11px;
+    top: 250px;
     width: 80px;
     background-color: white;
     box-shadow: none;
@@ -484,14 +499,15 @@ background-color: gray;
     justify-content: center;
     margin-left: 680px;
     padding: 2px;
-    bottom: 35px;
+    /* bottom: 35px; */
+    top: 205px;
     width: 40px;
     height: 40px;
 }
 .addCategoryBtn{
     position: relative;
-    top: 10px;
-    bottom: 0px;
+    top: 250px;
+    /* bottom: 0px; */
     width: 150px;
     height: 40px;
     background-color: #3AAFA9;
@@ -509,11 +525,11 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    top: 10px;
+    top: 280px;
 }
 #createCollectionBlockchainDesc{
     position: relative;
-    top: 10px;
+    top: 280px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -527,13 +543,15 @@ background-color: gray;
     background: none;
     position: relative;
     margin-left: 360px;
-    bottom: 22px;
+    /* bottom: 22px; */
+    top: 250px;
     border: none;
 }  
 #blockchainInfoDialogue {
     position: relative;
     margin-left: 400px;
-    bottom: 190px;
+    /* bottom: 190px; */
+    top: 80px;
     transform: translateX(-50%);
     width: 350px;
     padding: 10px;
@@ -556,7 +574,8 @@ background-color: gray;
 .blockchainDropdown {
     position: relative;
     margin-left: 250px;
-    bottom: 130px;
+    /* bottom: 130px; */
+    top: 150px;
     display: inline-block;
 }  
 .blockchainDropdownBtn {
@@ -629,12 +648,14 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 100px;
+    /* bottom: 100px; */
+    top: 180px;
 }
 #createCollectionTokensDesc{
     position: relative;
     font-weight: lighter;
-    bottom: 100px;
+    /* bottom: 100px; */
+    top: 180px;
     font-size: 12px;
     color: gray;
     margin-left: 250px;
@@ -643,7 +664,8 @@ background-color: gray;
     display: flex;
     position: relative;
     margin-left: 250px;
-    bottom: 100px;
+    /* bottom: 100px; */
+    top: 180px;
 }
 .paymentTokensContainer p{
     color: #000;
@@ -656,7 +678,8 @@ background-color: gray;
 .tokensDropdown {
     position: relative;
     margin-left: 250px;
-    bottom: 100px;
+    /* bottom: 100px; */
+    top: 200px;
     display: inline-block;
 }  
 .tokensDropdownBtn {
@@ -732,11 +755,13 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 80px;
+    /* bottom: 80px; */
+    top: 250px;
 }
 #collectionExplicitContentDesc{
     position: relative;
-    bottom: 80px;
+    /* bottom: 80px; */
+    top: 250px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -745,20 +770,21 @@ background-color: gray;
 .explicitContentInfoBtn .fa-circle-info{
     position: relative;
     color: #000;
-    bottom: 89px;
+    /* bottom: 89px; */
     margin-left: 140px;
 }
 .explicitContentInfoBtn{
     background: none;
     position: relative;
     margin-left: 360px;
-    bottom: 22px;
+    /* bottom: 22px; */
+    top: 218px;
     border: none;
 }  
 #explicitContentInfoDialogue {
     position: relative;
     margin-left: 530px;
-    bottom: 260px;
+    /* bottom: 260px; */
     transform: translateX(-50%);
     width: 350px;
     padding: 10px;
@@ -782,7 +808,8 @@ background-color: gray;
     position: relative;
     display: inline-block;
     margin-left: 655px;
-    bottom: 255px;
+    /* bottom: 255px; */
+    top: 70px;
     width: 40px;
     height: 20px;
   }
@@ -836,11 +863,13 @@ background-color: gray;
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 250px;
+    /* bottom: 250px; */
+    top: 100px;
 }
 #collectionRankingsDesc{
     position: relative;
-    bottom: 250px;
+    /* bottom: 250px; */
+    top: 100px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -849,20 +878,22 @@ background-color: gray;
 .collectionRankingInfoBtn .fa-circle-info{
     position: relative;
     color: #000;
-    bottom: 89px;
+    /* bottom: 89px; */
+    
     margin-left: 140px;
 }
 .collectionRankingInfoBtn{
     background: none;
     position: relative;
     margin-left: 440px;
-    bottom: 192px;
+    top: 68px;
+    /* bottom: 192px; */
     border: none;
 }  
 #collectionRankingsInfoDialogue {
     position: relative;
     margin-left: 600px;
-    bottom: 390px;
+    bottom: 40px;
     transform: translateX(-50%);
     width: 350px;
     padding: 10px;
@@ -886,7 +917,7 @@ background-color: gray;
     position: relative;
     display: inline-block;
     margin-left: 655px;
-    bottom: 385px;
+    bottom: 35px;
     width: 40px;
     height: 20px;
   }
@@ -937,12 +968,12 @@ background-color: gray;
 .confirmNewCollection{
     position: relative;
     margin-left: 250px;
-    bottom: 370px;
+    /* bottom: 370px; */
 }
 .createNewCollectionBtn{
     position: relative;
     top: 10px;
-    bottom: 0px;
+    margin-bottom: 10px;
     width: 150px;
     font-size: 15px;
     height: 40px;

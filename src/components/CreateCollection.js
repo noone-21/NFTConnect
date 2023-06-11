@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import Navbar from './Navbar'
 import './stylesheet/CreateCollection.css'
-import { CollectionsContext } from '../context/CollectionsProvider';
+import { CollectionsContext } from '../context/CollectionContext';
 import empty from './img/empty1.png'
 import ethereum from './img/ethereum.png'
 import polygon from './img/polygon.png'
@@ -35,7 +35,7 @@ function CreateCollection() {
 
     // //////////////////NEW COLLECTION OBJECT///////////////
     const [collectionData, setCollectionData] = useState({
-        collectionId: uuidv4(),
+        collectionId: 0,
         logoImage: '',
         featuredImage: '',
         bannerImage: '',
@@ -244,10 +244,7 @@ function CreateCollection() {
             return field;
         });
         setFields(updatedFields);
-        setCollectionData((prevData) => ({
-            ...prevData,
-            // creatorEarnings.,
-        }));
+        
     };
 
     const handleField2Change = (e, id) => {
@@ -267,6 +264,13 @@ function CreateCollection() {
             field2: ''
         };
         setFields((prevFields) => [...prevFields, newField]);
+        setCollectionData((prevData) => ({
+            ...prevData,
+            creatorEarnings: {
+              address: newField.field1,
+              percentage: newField.field2
+            }
+          }));
     };
 
     const handleDeleteField = (id) => {
@@ -415,15 +419,11 @@ function CreateCollection() {
 
         const updatedCollections = [...myCollections, collectionData];
         setMyCollections(updatedCollections);
-        console.log(myCollections)
-        // console.log(collectionData)
-        console.log('This is deescription', myCollections[5].Description)
 
         // Store the updated collections in localStorage
-        localStorage.setItem('myCollections', JSON.stringify(updatedCollections));
-
+        
         setCollectionData({
-            id: uuidv4(),
+            collectionId: collectionData.collectionId+1,
             logoImage: '',
             featuredImage: '',
             bannerImage: '',
@@ -445,6 +445,7 @@ function CreateCollection() {
             explicitContent: false,
             openRarityRankings: false,
         });
+        localStorage.setItem('myCollections', JSON.stringify(updatedCollections));
         // window.location.reload(); 
 
     };
@@ -726,21 +727,7 @@ function CreateCollection() {
                 <div className='confirmNewCollection' >
                     <button className="createNewCollectionBtn" onClick={handleCreateCollection}>Create</button>
                 </div>
-
             </div>
-            {myCollections.length === 0 && 'No Collections To Display'}
-            {myCollections.map(() => (
-                <CollectionItem
-                    key={myCollections.id}
-                    profilePicture={myCollections.logoImage}
-                    coverPhoto={myCollections.featuredImage}
-                    name={myCollections.name}
-                    authorName={`by @${author}`}
-                    description={myCollections.description}
-                    numOfItems={noOfItems}
-                    maxDescriptionLength={80}
-                />
-            ))}
         </>
     )
 }

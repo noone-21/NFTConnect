@@ -267,6 +267,21 @@
   .collectionDropdown.active .nftCollectionsList {
     display: block;
   }
+
+  .nftCollectionListItem{
+    border-radius: 10px;
+    margin: 5px;
+} 
+.nftCollectionListItem p:hover {
+    background-color: #f1f1f1;
+}  
+.nftCollectionLogo{
+  position: relative;
+    top: 5px;
+    height: 20px;
+    border-radius: 50%;
+    width: 20px;
+}
   
   
   

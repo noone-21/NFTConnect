@@ -57,6 +57,7 @@
     position: relative;
     bottom: 140px;
     width: 150px;
+    font-size: 12px;
     height: 40px;
     background-color: #3AAFA9;
     color: #FFFFFF;
@@ -67,7 +68,7 @@
   }
   .otherPlatformBtn{
     position: relative;
-    bottom: 140px;
+    bottom: 139px;
     width: 50px;
     height: 40px;
     margin-left: 20px;
@@ -97,7 +98,15 @@
   .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
-  
+
+  #myCollection {
+    position: relative;
+    bottom: 90px;
+    margin-left: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+    grid-gap: 10px; /* Add some gap between the items */
+  }
 
 
  

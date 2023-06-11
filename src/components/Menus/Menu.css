@@ -2,6 +2,7 @@
     /* width: 70px; */
     display: flex;
     flex-direction: column;
+    padding: 0%;
     z-index: 1;
     height: fit-content;
     border-radius: 7px;

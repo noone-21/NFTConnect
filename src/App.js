@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { CollectionsProvider } from './context/CollectionsProvider';
+import { CollectionsProvider } from './context/CollectionContext';
 import LoadingScreen from './components/LoadingScreen';
 import { useState} from "react";
 import Dashboard from './components/Dashboard';

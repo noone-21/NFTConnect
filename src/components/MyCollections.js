@@ -1,23 +1,22 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import './stylesheet/MyCollections.css';
-import { CollectionsContext } from '../context/CollectionsProvider';
+import { CollectionsContext } from '../context/CollectionContext';
 import Navbar from './Navbar';
 import art from './img/cover.jpg';
 import domain from './img/profile.jpg';
 import CollectionItem from './CollectionItem';
 
-
 function MyCollections() {
-  const author='Danish'
-  const noOfItems='13'
-  const [myCollections,setMyCollections] = useContext(CollectionsContext);
+  const author = 'Danish';
+  const noOfItems = '13';
+  const [myCollections, setMyCollections] = useContext(CollectionsContext);
+
   useEffect(() => {
     const storedCollections = localStorage.getItem('myCollections');
     if (storedCollections) {
       setMyCollections(JSON.parse(storedCollections));
     }
-  }, [setMyCollections]); 
-  console.log(myCollections[0].name);
+  }, [setMyCollections]);
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -71,19 +70,20 @@ function MyCollections() {
             <a href="/">Mint on Mintable</a>
           </div>
         )}
-        <div className="myCollection">
-          {myCollections.map(() => (
-            <CollectionItem
-              key={myCollections.id}
-              profilePicture={myCollections.logoImage}
-              coverPhoto={myCollections.featuredImage}
-              name={myCollections.name}
+        <div id="myCollection">
+          {myCollections.length === 0 && 'No Collections To Display'}
+          {myCollections.map((collection) => {
+            return <CollectionItem
+              key={collection.collectionId}
+              profilePicture={collection.logoImage}
+              coverPhoto={collection.featuredImage}
+              collectionName={collection.Name}
               authorName={`by @${author}`}
-              description={myCollections.description}
+              description={collection.Description}
               numOfItems={noOfItems}
               maxDescriptionLength={80}
             />
-          ))}
+          })}
         </div>
       </div>
     </>
