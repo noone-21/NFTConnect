@@ -30,9 +30,10 @@
   margin: 0 auto 20px;
 }
 
-.collectionName {
+.collection-Name {
   position: relative;
-  left: 40px;
+  text-align: center;
+  /* left: 40px; */
   bottom: 70px;
   font-size: 18px;
   font-weight: bold;
@@ -56,8 +57,9 @@
 }
 
 .collection-num-of-items {
-  position: relative;
+  position: absolute;
   bottom: 5px;
+  text-align: center;
   font-size: 14px;
   color: #888;
 }

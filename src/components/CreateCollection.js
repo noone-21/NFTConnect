@@ -22,11 +22,8 @@ import ape from './img/ape.png'
 import sand from './img/sand.png'
 import eth from './img/eth.png'
 import weth from './img/weth.png'
-import CollectionItem from './CollectionItem';
 
 function CreateCollection() {
-    const author = 'Danish'
-    const noOfItems = '13'
 
     const [myCollections, setMyCollections] = useContext(CollectionsContext);
 
@@ -372,27 +369,27 @@ function CreateCollection() {
 
 
     // //////////////EXPLICIT CONTENT SWITCH////////////////
-    const [isCheckedExplicit, setIsCheckedExplicit] = useState(false);
+    // const [isCheckedExplicit, setIsCheckedExplicit] = useState(false);
 
-    const handleToggleExplicit = () => {
-        setIsCheckedExplicit(!isCheckedExplicit);
-        setCollectionData((prevData) => ({
-            ...prevData,
-            explicitContent: !prevData.explicitContent
-        }));
-    };
+    // const handleToggleExplicit = () => {
+    //     setIsCheckedExplicit(!isCheckedExplicit);
+    //     setCollectionData((prevData) => ({
+    //         ...prevData,
+    //         explicitContent: !prevData.explicitContent
+    //     }));
+    // };
 
 
     // //////////////OpenRarity Rankings SWITCH////////////////
-    const [isCheckedRankings, setIsCheckedRankings] = useState(false);
+    // const [isCheckedRankings, setIsCheckedRankings] = useState(false);
 
-    const handleToggleRankings = () => {
-        setIsCheckedRankings(!isCheckedRankings);
-        setCollectionData((prevData) => ({
-            ...prevData,
-            openRarityRankings: !prevData.openRarityRankings
-        }));
-    };
+    // const handleToggleRankings = () => {
+    //     setIsCheckedRankings(!isCheckedRankings);
+    //     setCollectionData((prevData) => ({
+    //         ...prevData,
+    //         openRarityRankings: !prevData.openRarityRankings
+    //     }));
+    // };
 
     // /////////////////CREATE COLLECTION///////////////
 
@@ -473,12 +470,12 @@ function CreateCollection() {
 
                 {/* /////////////MAIN HEADING////////////// */}
                 <h1 className='createCollectionHeading' >Create a Collection</h1>
-                <p className='sterric' >*</p>
-                <p className='required' >Required fields</p>
+                <p id='sterric' >*</p>
+                <p id='required' >Required fields</p>
 
                 {/* /////////////LOGO IMAGE///////////// */}
                 <h2 className='createCollectionLogoImgTitle' >Logo Image<p id='sterricI' >*</p> </h2>
-                <p className='imgDesc' > This image will also be used for navigation. 350 x 350 recommended.
+                <p className='logoImgDesc' > This image will also be used for navigation. 350 x 350 recommended.
                 </p>
                 <div className="createCollectionLogoImg" onClick={handleLogoImgClick}>
                     <img id="logoImg" src={empty} alt="" />

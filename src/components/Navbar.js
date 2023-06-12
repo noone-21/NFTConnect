@@ -46,7 +46,7 @@ function Navbar() {
     useOnHoverOutside(resourcesRef, closeResourcesMenu); // Call the hook
     useOnHoverOutside(profileRef, closeProfileMenu); // Call the hook
 
-const [isScrolled, setisScrolled] = useState(false)
+    const [isScrolled, setisScrolled] = useState(false)
     // Listen for the page to scroll
     window.addEventListener("scroll", () => {
         // Check if the page has been scrolled
@@ -56,6 +56,11 @@ const [isScrolled, setisScrolled] = useState(false)
             setisScrolled(false)
         }
     });
+    const [isOpen, setIsOpen] = useState(false);
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    };
 
 
     return (
@@ -91,7 +96,7 @@ const [isScrolled, setisScrolled] = useState(false)
                     <li ref={profileRef} ><button className='nav-buttons' onMouseOver={() => setProfileMenuOpen(true)}  ><i className="fa-regular fa-user"></i></button>
                         {isProfileMenuOpen && <ProfileMenu />}
                     </li>
-                    <li ><button className='nav-buttons'><i className="fa-solid fa-wallet"></i></button>
+                    <li  ><button onClick={togglePopup} className='nav-buttons'><i className="fa-solid fa-wallet"></i></button>
                     </li>
                     <li><button className='nav-buttons' ><i className="fa-solid fa-cart-shopping"></i></button>
                     </li>

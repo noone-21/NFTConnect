@@ -35,7 +35,7 @@ function Collection(props) {
                 </div>
                 <div className='collectionBody' >
                     <div id='collectionTitle' >
-                        <h1 className='collectionName' >{props.title}</h1>
+                        <h1 id='collectionName' >{props.title}</h1>
                         <div className='collectionIcons' >
                             <Link to='/' className='iconLink'><i className="fa-solid fa-globe"></i></Link>
                             <Link to='/' className='iconLink'><i className="fa-regular fa-star"></i></Link>

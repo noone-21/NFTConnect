@@ -35,7 +35,7 @@
     font-family: 'Montserrat', sans-serif;
     margin-left: 250px;
 }
-.required{
+#required{
     position: relative;
     /* top: 50px; */
     bottom: 60px;
@@ -43,7 +43,7 @@
     color: gray;
     margin-left: 260px;
 }
-.sterric{
+#sterric{
     position: relative;
     margin-left: 250px;
     bottom: 20px;
@@ -65,10 +65,10 @@
     bottom: 30px;
     color: crimson;
 }
-.imgDesc{
+.logoImgDesc{
     position: relative;
     /* top: 50px; */
-    /* bottom: 70px; */
+    bottom: 70px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;

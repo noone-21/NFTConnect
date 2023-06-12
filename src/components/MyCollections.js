@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import './stylesheet/MyCollections.css';
 import { CollectionsContext } from '../context/CollectionContext';
 import Navbar from './Navbar';
-import art from './img/cover.jpg';
-import domain from './img/profile.jpg';
 import CollectionItem from './CollectionItem';
 
 function MyCollections() {
@@ -63,7 +61,7 @@ function MyCollections() {
           <i className="fa-solid fa-ellipsis-vertical"></i>
         </button>
         {isOpen && (
-          <div className="dropdownContent">
+          <div className="dropdown-Content">
             <a href="/">Mint on OpenSea</a>
             <a href="/">Mint on Rarible</a>
             <a href="/">Mint on Mintbase</a>

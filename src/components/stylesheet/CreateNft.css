@@ -4,24 +4,30 @@
 .createNftPage{
     position: absolute;
 }
+.createNftPage hr{
+  width: 450px;
+  margin-left: 250px;
+}
 
 .createNftHeading{
-    margin-top: 120px;
-    margin-left: 250px;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
+  position: relative;
+  top: 30px;
+  margin-top: 120px;
+  margin-left: 250px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
 
 .required{
     position: relative;
-    /* top: 50px; */
-    bottom: 40px;
+    top: 10px;
     font-weight: lighter;
     color: gray;
     margin-left: 260px;
 }
 .sterric{
     position: relative;
+    top: 50px;
     margin-left: 250px;
     color: crimson;
 }
@@ -36,13 +42,12 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 30px;
+    top: 10px;
 }
 
 .imgDesc{
     position: relative;
-    /* top: 50px; */
-    bottom: 70px;
+    bottom: 20px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -56,7 +61,7 @@
     margin-left: 250px;
     border: 2px dotted #000;
     border-radius: 10px;
-    bottom: 40px;
+    
   }
 
   .createNftImg:hover{
@@ -79,13 +84,13 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 30px;
+    top: 30px;
 }
 .createNftInput{
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 50px;
+    top: 10px;
     font-size: 17px;
     color: black;
     height: 35px;
@@ -99,12 +104,11 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 30px;
+    top: 30px ;
 }
 .linkDesc{
     position: relative;
-    /* top: 50px; */
-    bottom: 30px;
+    top: 30px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -115,7 +119,7 @@
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 30px;
+    top: 50px;
     font-size: 17px;
     color: black;
     height: 35px;
@@ -129,13 +133,12 @@
   position: relative;
   margin-left: 250px;
   font-size: 15px;
-  bottom: 25px;
+  top: 70px;
 }
 
 .linkDesc2{
   position: relative;
-  /* top: 50px; */
-  bottom: 30px;
+  top: 80px;
   font-weight: lighter;
   font-size: 12px;
   color: gray;
@@ -145,7 +148,7 @@
     position: relative;
     margin-left: 250px;
     border-radius: 5px;
-    bottom: 30px;
+    top: 100px;
     font-size: 17px;
     color: black;
     height: 100px;
@@ -159,12 +162,11 @@
     position: relative;
     margin-left: 250px;
     font-size: 15px;
-    bottom: 20px;
+    top: 120px;
 }
 .collectionDesc{
     position: relative;
-    /* top: 50px; */
-    bottom: 20px;
+    top: 130px;
     font-weight: lighter;
     font-size: 12px;
     color: gray;
@@ -179,7 +181,7 @@
     background: none;
     position: relative;
     margin-left: 495px;
-    bottom: 50px;
+    top: 100px;
     border: none;
 }
   
@@ -213,7 +215,7 @@
   .collectionDropdown {
     position: relative;
     margin-left: 250px;
-    bottom: 130px;
+    top: 20px;
     display: inline-block;
   }
   
@@ -282,7 +284,288 @@
     border-radius: 50%;
     width: 20px;
 }
-  
+
+
+/* ////////////PROPERTIES////////////////// */
+.createNftProperties{
+  position: relative;
+  bottom: 10px;
+}
+.propertiesHeading{
+  position: relative;
+  margin-left: 280px;
+  font-size: 15px;
+  top: 50px ;
+}
+#propertiesIcon{
+  position: relative;
+  margin-left: 255px;
+  top: 85px;
+}
+.propertiesDesc{
+  position: relative;
+  top: 50px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 280px;
+}
+#propertiesAdd{
+  position: relative;
+  margin-left: 650px;
+  bottom: 10px;
+  color: blue;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+
+/* ////////////////LEVELS//////////// */
+.createNftLevels{
+  position: relative;
+  bottom: 30px;
+}
+.levelsHeading{
+  position: relative;
+  margin-left: 280px;
+  font-size: 15px;
+  top: 50px ;
+}
+#levelsIcon{
+  position: relative;
+  margin-left: 255px;
+  top: 85px;
+}
+.levelsDesc{
+  position: relative;
+  top: 50px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 280px;
+}
+#levelsAdd{
+  position: relative;
+  margin-left: 650px;
+  bottom: 10px;
+  color: blue;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+
+/* /////////////STATS////////////// */
+.createNftStats{
+  position: relative;
+  bottom: 30px;
+}
+.statsHeading{
+  position: relative;
+  margin-left: 280px;
+  font-size: 15px;
+  top: 50px ;
+}
+#statsIcon{
+  position: relative;
+  margin-left: 255px;
+  width: 18px;
+  height: 16px;
+  top: 90px;
+}
+.statsDesc{
+  position: relative;
+  top: 50px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 280px;
+}
+#statsAdd{
+  position: relative;
+  margin-left: 650px;
+  bottom: 10px;
+  color: blue;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+
+/* /////////////UNLOCKABLE CONTENT////////////// */
+.createNftUnlockable{
+  position: relative;
+  bottom: 20px;
+}
+.unlockableHeading{
+  position: relative;
+  margin-left: 280px;
+  font-size: 15px;
+  top: 30px ;
+}
+#unlockableIcon{
+  position: relative;
+  margin-left: 255px;
+  width: 18px;
+  height: 16px;
+  top: 70px;
+}
+.unlockableDesc{
+  position: relative;
+  top: 30px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 280px;
+}
+#unlockableAdd{
+  position: relative;
+  margin-left: 650px;
+  bottom: 10px;
+  color: blue;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.nftUnlockableSwitch {
+  position: relative;
+  display: inline-block;
+  margin-left: 655px;
+  bottom: 35px;
+  width: 40px;
+  height: 20px;
+}
+.nftUnlockableSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.nftUnlockableSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+.nftUnlockableSlider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+.nftUnlockableSwitch input:checked + .nftUnlockableSlider {
+  background-color: #2196F3;
+}
+.nftUnlockableSwitch input:focus + .nftUnlockableSlider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.nftUnlockableSwitch input:checked + .nftUnlockableSlider:before {
+  transform: translateX(20px);
+}
+
+
+/* /////////////EXPLICIT CONTENT////////////// */
+.createNftExplicit{
+  position: relative;
+  bottom: 20px;
+}
+.explicitHeading{
+  position: relative;
+  margin-left: 280px;
+  font-size: 15px;
+  top: 30px ;
+}
+#explicitIcon{
+  position: relative;
+  margin-left: 255px;
+  width: 18px;
+  height: 16px;
+  top: 70px;
+}
+.explicitDesc{
+  position: relative;
+  top: 30px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 280px;
+}
+.createNftExplicitInfoBtn:hover + .nftExplicitinfoDialogue, .nftExplicitinfoDialogue:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.nftExplicitinfoDialogue a{
+  color: #2EEBE2;
+}
+#explicitAdd{
+  position: relative;
+  margin-left: 650px;
+  bottom: 10px;
+  color: blue;
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.nftExplicitSwitch {
+  position: relative;
+  display: inline-block;
+  margin-left: 655px;
+  bottom: 25px;
+  width: 40px;
+  height: 20px;
+}
+
+.nftExplicitSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.nftExplicitSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.nftExplicitSlider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.nftExplicitSwitch input:checked + .nftExplicitSlider {
+  background-color: #2196F3;
+}
+
+.nftExplicitSwitch input:focus + .nftExplicitSlider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.nftExplicitSwitch input:checked + .nftExplicitSlider:before {
+  transform: translateX(20px);
+}
   
   
 

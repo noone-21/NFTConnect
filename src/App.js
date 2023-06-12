@@ -12,6 +12,7 @@ import Collection from './components/Collection';
 import CreateNft from './components/CreateNft';
 import CreateCollection from './components/CreateCollection';
 import MyCollections from './components/MyCollections';
+import SellNFT from './components/SellNFT';
 
 function App() {
 
@@ -62,6 +63,7 @@ const images4 = [
           <Route exact path='/createnft' element={<CreateNft/>} ></Route> 
           <Route exact path='/createcollection' element={<CreateCollection/>} ></Route> 
           <Route exact path='/mycollections' element={<MyCollections/>} ></Route> 
+          <Route exact path='/sellNFT' element={<SellNFT/>} ></Route> 
       </Routes>
     </Router>
     </CollectionsProvider>

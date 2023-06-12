@@ -33,7 +33,7 @@
     /* left: 50px; */
     display: flex;
 }
-.collectionName{
+#collectionName{
     display: flex;
     position: relative;
     width: 500px;

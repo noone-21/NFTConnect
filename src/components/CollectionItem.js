@@ -15,7 +15,7 @@ const CollectionItem = (props) => {
       </div>
       <div className="collectionProfile">
         <img src={profilePicture} alt="Profile" className="collection-profile-picture" />
-        <h3 className="collectionName">{collectionName}</h3>
+        <h3 className="collection-Name">{collectionName}</h3>
         <div className="collection-author-name">{authorName}</div>
         <div className="collectionDescription">{limitedDescription}</div>
         <div className="collection-num-of-items">{numOfItems} Items</div>
