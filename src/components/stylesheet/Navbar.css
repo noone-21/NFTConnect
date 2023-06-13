@@ -69,10 +69,11 @@
   a{
     text-decoration: none;
   }
-  .search-box i {
+  .search-box img {
     position: absolute;
-    margin: 2px 0 0 1px;
-    font-size: small;
+    margin: 8px 0 0 3px;
+    height: 20px;
+    width: 20px;
     color: black;
   }
   
@@ -96,7 +97,7 @@
   .search-box:hover input::placeholder{
    color: gray;
   }
-  .search-box:hover .fi-rs-search{
+  .search-box:hover img{
    color: gray;
   }
   
@@ -174,4 +175,7 @@
   .popup.active .popup-content {
     transform: translateX(0);
   }
-  
+  .nav-buttons img{
+    width: 30px;
+    height: 30px;
+  }  

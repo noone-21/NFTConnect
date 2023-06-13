@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './stylesheet/ImageSlider.css'
+import leftArrow from './img/leftArrow.png'
+import rightArrow from './img/rightArrow.png'
 
 function ImageSlider(props) {
 
@@ -42,7 +44,7 @@ function ImageSlider(props) {
         setIsSelected3(false);
         setIsSelected4(false);
         setIsSelected5(false);
-        setIsSelected6(false); 
+        setIsSelected6(false);
     };
     const artBtn = () => {
         setIsSelected1(false);
@@ -50,7 +52,7 @@ function ImageSlider(props) {
         setIsSelected3(false);
         setIsSelected4(false);
         setIsSelected5(false);
-        setIsSelected6(false); 
+        setIsSelected6(false);
     };
     const gamingBtn = () => {
         setIsSelected1(false);
@@ -58,7 +60,7 @@ function ImageSlider(props) {
         setIsSelected3(true);
         setIsSelected4(false);
         setIsSelected5(false);
-        setIsSelected6(false); 
+        setIsSelected6(false);
     };
     const membershipsBtn = () => {
         setIsSelected1(false);
@@ -66,7 +68,7 @@ function ImageSlider(props) {
         setIsSelected3(false);
         setIsSelected4(true);
         setIsSelected5(false);
-        setIsSelected6(false); 
+        setIsSelected6(false);
     };
     const pfpsBtn = () => {
         setIsSelected1(false);
@@ -74,7 +76,7 @@ function ImageSlider(props) {
         setIsSelected3(false);
         setIsSelected4(false);
         setIsSelected5(true);
-        setIsSelected6(false); 
+        setIsSelected6(false);
     };
     const photographyBtn = () => {
         setIsSelected1(false);
@@ -82,7 +84,7 @@ function ImageSlider(props) {
         setIsSelected3(false);
         setIsSelected4(false);
         setIsSelected5(false);
-        setIsSelected6(true); 
+        setIsSelected6(true);
     };
 
     const imgSlider = () => {
@@ -91,16 +93,16 @@ function ImageSlider(props) {
         setIsSelected3(false);
         setIsSelected4(false);
         setIsSelected5(false);
-        setIsSelected6(false); 
+        setIsSelected6(false);
     };
 
 
 
     return (
         <>
-        <div className='dashboard-menu' >
+            <div className='dashboard-menu' >
                 <button className='allBtn' onClick={allBtn}
-                    style={{ background: !isSelected1 ? 'none' : '#4197af'  }} ><Link className='Link' to='/' >All</Link></button>
+                    style={{ background: !isSelected1 ? 'none' : '#4197af' }} ><Link className='Link' to='/' >All</Link></button>
                 <button className='artBtn' onClick={artBtn}
                     style={{ background: !isSelected2 ? 'none' : '#4197af' }} ><Link className='Link' to='/art' >Art</Link></button>
                 <button className='gamingBtn' onClick={gamingBtn}
@@ -114,16 +116,16 @@ function ImageSlider(props) {
             </div>
             <Link className='imgSliderLink' to='/art/collection' onClick={imgSlider} >
                 <div id='image-slider' >
-                    <button id="prev" onClick={prevButton} ><i className="fa-solid fa-circle-chevron-left"></i></button>
                     <img className='collectionImg' src={props.collectionImg} alt="" />
                     <h1 className='collectionTitle' >{props.title}</h1>
                     <p className='collectionAuthor' >{props.author}</p>
                     <p className='collectionInfo' >{props.info} · {props.price} </p>
                     <img id="image-container" src={props.images[currentImageIndex]} alt="NFT" />
                     <button className='collectionBtn' > View Collection</button>
-                    <button id="next" onClick={nextButton} ><i className="fa-solid fa-circle-chevron-right"></i></button>
                 </div>
             </Link>
+            <button id="prev" onClick={prevButton} > <img src={leftArrow} alt="" /></button>
+            <button id="next" onClick={nextButton} > <img src={rightArrow} alt="" /></button>
 
         </>
     )

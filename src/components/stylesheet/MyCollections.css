@@ -18,6 +18,12 @@
     bottom: 32px;
     border: none;
 }
+.myCollectionsInfoBtn img{
+  position: relative;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+}
 .myCollectionsDesc{
     position: relative;
     /* top: 50px; */
@@ -68,13 +74,17 @@
   }
   .otherPlatformBtn{
     position: relative;
-    bottom: 139px;
+    bottom: 133px;
     width: 50px;
     height: 40px;
     margin-left: 20px;
     padding: 10px;
     border-radius: 5px;
     border: black 1px solid;
+  }
+  .otherPlatformBtn img{
+    width: 20px;
+    height: 20px;
   }
   
   .dropdown-Content {

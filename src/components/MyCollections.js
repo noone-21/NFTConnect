@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import './stylesheet/MyCollections.css';
 import { CollectionsContext } from '../context/CollectionContext';
 import Navbar from './Navbar';
+import info from './img/info.png'
+import dots from './img/dots.png'
 import CollectionItem from './CollectionItem';
 
 function MyCollections() {
@@ -43,7 +45,7 @@ function MyCollections() {
         <h1 className="myCollectionsHeading">My Collections</h1>
         <p className="myCollectionsDesc">Create, curate, and manage collections of unique NFTs to share and sell.</p>
         <button className="myCollectionsInfoBtn">
-          <i className="fa-solid fa-circle-info"></i>
+          <img src={info} alt="" />
         </button>
         <div className="info-dialogue">
           <p>
@@ -58,7 +60,7 @@ function MyCollections() {
           <button className="createCollectionBtn">Create a Collection</button>
         </a>
         <button className="otherPlatformBtn" ref={dropdownRef} onClick={toggleDropdown}>
-          <i className="fa-solid fa-ellipsis-vertical"></i>
+          <img src={dots} alt="" />
         </button>
         {isOpen && (
           <div className="dropdown-Content">

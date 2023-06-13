@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 // import { Link } from 'react-router-dom'
 import CollectionsInfo from './CollectionsInfo'
 import Footer from './Footer'
@@ -7,7 +7,12 @@ import MultiImageSlider from './MultiImageSlider'
 import MultiImageSlider2 from './MultiImageSlider2'
 import Navbar from './Navbar'
 import './stylesheet/Style.css'
-// import NFT1 from './img/NFT1.jpg'
+import downArrow from './img/downArrow.png'
+import ethereum from './img/ethereum-1.png'
+import bnb from './img/bnb.png'
+import solana from './img/solana-1.png'
+import bitcoin from './img/bitcoin.png'
+import polygon from './img/polygon-1.png'
 
 function Dashboard(props) {
 
@@ -16,14 +21,46 @@ function Dashboard(props) {
 
     const trendBtn = () => {
         setIsSelectedTrend(true);
-        setIsSelectedTop(false); 
+        setIsSelectedTop(false);
     };
     const topBtn = () => {
         setIsSelectedTrend(false);
-        setIsSelectedTop(true); 
+        setIsSelectedTop(true);
     };
 
+    const [isOpenTime, setIsOpenTime] = useState(false);
+    const dropdownRefTime = useRef(null);
+    const [selectedItemTime, setSelectedItemTime] = useState('24h');
 
+    const TimeItems = [
+        '1h',
+        '6h',
+        '24h',
+        '7d',
+        '30d',
+        'All',
+    ];
+    const TimeFilteredItems = TimeItems.filter((item) => item !== selectedItemTime);
+
+    const toggleDropdownTime = () => {
+        setIsOpenTime(!isOpenTime);
+    };
+    const handleClickOutsideTime = (event) => {
+        if (dropdownRefTime.current && !dropdownRefTime.current.contains(event.target)) {
+            setIsOpenTime(false);
+        }
+    };
+    useEffect(() => {
+        window.addEventListener("click", handleClickOutsideTime);
+        return () => {
+            window.removeEventListener("click", handleClickOutsideTime);
+        };
+    }, []);
+    const handleItemClickTime = (item) => {
+        setSelectedItemTime(item);
+        setIsOpenTime(false);
+
+    };
 
     return (
         <>
@@ -34,32 +71,43 @@ function Dashboard(props) {
             <div className='nft-chart' >
                 <button className='btn-heading' onClick={trendBtn} style={{ background: !isSelectedTrend ? 'none' : 'gray' }} >Trending</button>
                 <button className='btn-heading' onClick={topBtn} style={{ background: !isSelectedTop ? 'none' : 'gray' }} >Top</button>
-                <div className='dropdown' >
-                    <button className='btn-time' >24h <i className="fa-solid fa-chevron-down"></i></button>
-                    <div className='dropdown-content' >
-                        <p>1h</p>
-                        <hr />
-                        <p>6h</p>
-                        <hr />
-                        <p>24h</p>
-                        <hr />
-                        <p>7d</p>
-                        <hr />
-                        <p>30d</p>
-                        <hr />
-                        <p>All</p>
+
+                <div className={`TimeDropdown ${isOpenTime ? "active" : ""}`} ref={dropdownRefTime} >
+                    <button className="TimeDropdownBtn" onClick={toggleDropdownTime} >
+                        <p> {selectedItemTime}</p>
+                        <img className='nftTimeArrowBtn'  src={downArrow} alt='' ></img>
+                    </button>
+                    <div className="TimesList">
+                        {TimeFilteredItems.map((item) => (
+                            <div className='TimeListItem' >
+                                <p
+                                    key={item}
+                                    className={selectedItemTime === item ? 'selected' : ''}
+                                    onClick={() => handleItemClickTime(item)}
+                                >
+                                    {item}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
-                <div className='chain-btn' >
+                <div className="chain-btn">
                     <p>All Chains</p>
-                    <button><i className="fa-brands fa-ethereum"></i></button>
-                    <button><i className="fa-brands fa-bitcoin"></i></button>
-                    <button><i className="fa-solid fa-k"></i></button>
-                    <button><i className="fa-solid fa-a"></i></button>
-                    <button><i className="fa-solid fa-hill-avalanche"></i></button>
-                    <button><i className="fa-solid fa-o"></i></button>
-                    <button><i className="fa-solid fa-infinity"></i></button>
-                    <button><i className="fa-solid fa-s"></i></button>
+                    <button title="Ethereum">
+                        <img src={ethereum} alt="" />
+                    </button>
+                    <button title="Solana">
+                        <img src={solana} alt="" />
+                    </button>
+                    <button title="Binance">
+                        <img src={bnb} alt="" />
+                    </button>
+                    <button title="Polygon">
+                        <img src={polygon} alt="" />
+                    </button>
+                    <button title="Bitcoin">
+                        <img src={bitcoin} alt="" />
+                    </button>
                 </div>
                 <button className='viewAll-btn' >View all</button>
             </div>
@@ -106,7 +154,7 @@ function Dashboard(props) {
             <div className='imgSlider' >
                 <h1 className='slider-headings' >NFT 101</h1>
                 <p className='learn-hint' >learn step by step</p>
-                <MultiImageSlider2 category1='What is an NFT?' category2='What is a Crypto Wallet?' category3='What is Blockchain gas fee?' category4='How to buy NFT?' category5='How to create NFT on NFTConnect?' />
+                <MultiImageSlider2 category1='What is an NFT?' category2='What is a Crypto Wallet?' category3='What is Time gas fee?' category4='How to buy NFT?' category5='How to create NFT on NFTConnect?' />
             </div>
             <div className='imgSlider' >
                 <h1 className='slider-headings' >Browse by Category</h1>

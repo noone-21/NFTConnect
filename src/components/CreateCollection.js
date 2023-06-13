@@ -3,6 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 import Navbar from './Navbar'
 import './stylesheet/CreateCollection.css'
 import { CollectionsContext } from '../context/CollectionContext';
+import rightArrows from './img/rightArrows.png'
+import downArrow from './img/downArrow.png'
+import upArrow from './img/upArrow.png'
+import info from './img/info.png'
+import website from './img/website.png'
+import instagram from './img/instagram.png'
+import twitter from './img/twitter.png'
+import percent from './img/percent.png'
+import trash from './img/trash.png'
+import cross from './img/cross.png'
 import empty from './img/empty1.png'
 import ethereum from './img/ethereum.png'
 import polygon from './img/polygon.png'
@@ -42,8 +52,8 @@ function CreateCollection() {
         category: '',
         links: {
             yourSite: '',
-            Medium: '',
-            Telegram: ''
+            Instagram: '',
+            Twitter: ''
         },
         creatorEarnings: [{
             address: '',
@@ -211,21 +221,21 @@ function CreateCollection() {
             },
         }));
     };
-    const handleCollectionMediumLinkChange = (event) => {
+    const handleCollectionInstagramLinkChange = (event) => {
         const { value } = event.target;
         setCollectionData((prevData) => ({
             ...prevData,
             links: {
-                Medium: value
+                Instagram: value
             },
         }));
     };
-    const handleCollectionTelegramLinkChange = (event) => {
+    const handleCollectionTwitterLinkChange = (event) => {
         const { value } = event.target;
         setCollectionData((prevData) => ({
             ...prevData,
             links: {
-                Telegram: value
+                Twitter: value
             },
         }));
     };
@@ -327,6 +337,7 @@ function CreateCollection() {
         { name: 'WETH', image: weth },
     ]
     const [selectedLogoTokens, setSelectedLogoTokens] = useState(select);
+    console.log(selectedLogoTokens)
     const [tokensItems, setTokenItems] = useState([
         { name: 'DAI', image: dai },
         { name: 'USDC', image: usdc },
@@ -430,8 +441,8 @@ function CreateCollection() {
             category: '',
             links: {
                 yourSite: '',
-                Medium: '',
-                Telegram: ''
+                Instagram: '',
+                Twitter: ''
             },
             creatorEarnings: [{
                 address: '',
@@ -464,7 +475,7 @@ function CreateCollection() {
             <div className='createCollectionPage' >
                 <div className='createCollectionNavigation' >
                     <a href="/mycollections">My Collections</a>
-                    <i className="fa-solid fa-arrow-right"></i>
+                    <img className="fa-solid fa-arrow-right" src={rightArrows} alt="" />
                     <p>Create a Collection</p>
                 </div>
 
@@ -540,7 +551,7 @@ function CreateCollection() {
                 <div className={`nftCategoryDropdown ${isOpenCategory ? "active" : ""}`} ref={dropdownRefCategory} >
                     <button className="nftCategoryDropdownBtn" onClick={toggleDropdownCategory} >
                         <p><img className='categoryLogo' src={selectedLogoCategory} alt="" /> {selectedItemCategory}</p>
-                        <i className={`fa-solid fa-angle-${isOpenCategory ? 'up' : 'down'}`}></i>
+                        <img className='nftCategoryArrowBtn'  src={isOpenCategory ? upArrow: downArrow} alt='' ></img>
                     </button>
                     <div className="nftCategoryList">
                         {categoryFilteredItems.map((item) => (
@@ -561,25 +572,25 @@ function CreateCollection() {
                 {/* ///////////////COLLECTION LINKS/////////////// */}
                 <h2 className='createCollectionLinks' >Links </h2>
                 <div className="input-container">
-                    <i className="fa-solid fa-globe "></i>
+                    <img src={website} alt="" />
                     <input className='createCollectionInput4' type="text" placeholder='yoursite.io' value={collectionData.links.yourSite || ''}
                         onChange={handleCollectionYourSiteLinkChange} />
                 </div>
                 <div className="input-container">
-                    <i className="fa-brands fa-medium"></i>
+                    <img src={instagram} alt="" />
                     <input
                         className='createCollectionInput5'
                         type="text"
-                        placeholder='https://www.medium.com/YourediumHandle'
-                        value={collectionData.links.Medium || ''}
-                        onChange={handleCollectionMediumLinkChange}
+                        placeholder='https://www.Instagram.com/YourInstagramandle'
+                        value={collectionData.links.Instagram || ''}
+                        onChange={handleCollectionInstagramLinkChange}
                     />
                 </div>
                 <div className="input-container">
-                    <i className="fa-brands fa-telegram"></i>
-                    <input className='createCollectionInput6' type="text" placeholder='https://t.me/
-                    abcdef' value={collectionData.links.Telegram || ''}
-                        onChange={handleCollectionTelegramLinkChange} />
+                <img src={twitter} alt="" />
+                    <input className='createCollectionInput6' type="text" placeholder='https://twitter.com/
+                    abcdef' value={collectionData.links.Twitter || ''}
+                        onChange={handleCollectionTwitterLinkChange} />
                 </div>
 
                 {/* //////////////CREATOR EARNINGS////////////// */}
@@ -596,7 +607,8 @@ function CreateCollection() {
                                 onChange={(e) => handleField1Change(e, field.id)}  // Pass field.id to handleField1Change
                             />
                             <div id="input-container">
-                                <i className="fa-solid fa-percent"></i>
+                                
+                                <img src={percent} alt="" />
                                 <input
                                     className='createCollectionInput8'
                                     type="text"
@@ -605,7 +617,7 @@ function CreateCollection() {
                                 />
                             </div>
                             <button className='categoryDelBtn' onClick={() => handleDeleteField(field.id)}>
-                                <i className="fa-solid fa-trash"></i>
+                                <img src={trash} alt="" />
                             </button>
                         </div>
                     ))}
@@ -616,14 +628,14 @@ function CreateCollection() {
                 {/* /////////////////COLLECTION BLOCKCHAIN///////////// */}
                 <h2 className='createCollectionBlockchain' >Blockchain </h2>
                 <p id='createCollectionBlockchainDesc' > Select the blockchain where you'd like new items from this collection <br /> to be added by default.</p>
-                <button className='blockchainInfoBtn' ><i className="fa-solid fa-circle-info "></i> </button>
+                <button className='blockchainInfoBtn' ><img className='fa-solid fa-circle-info ' src={info} alt="" /> </button>
                 <div id="blockchainInfoDialogue">
                     Collections can be created either directly on <br /> NFTConnect or imported from an existing smart <br /> contract. You can also mint on other services like <br /> OpenSea or Rarible  and import the items to <br /> NFTConnect. <a href="/"> Learn more about creating NFTs for free on NFTConnect </a>
                 </div>
                 <div className={`blockchainDropdown ${isOpenBlockchain ? "active" : ""}`} ref={dropdownRefBlockchain} >
                     <button className="blockchainDropdownBtn" onClick={toggleDropdownBlockchain} >
                         <p><img className='blockchainLogo' src={selectedLogoBlockchain} alt="" /> {selectedItemBlockchain}</p>
-                        <i className={`fa-solid fa-angle-${isOpenBlockchain ? 'up' : 'down'}`}></i>
+                        <img className='nftBlockchainArrowBtn'  src={isOpenBlockchain ? upArrow: downArrow} alt='' ></img>
                     </button>
                     <div className="blockchainsList">
                         {blockchainFilteredItems.map((item) => (
@@ -649,7 +661,7 @@ function CreateCollection() {
                         <p key={token.name}>
                             <img className='tokensLogo' src={token.image} alt="" /> {token.name}
                             {paymentTokens.indexOf(token) >= initialPaymentTokens.length && (
-                                <i onClick={() => handleRemovePaymentToken(token)} className="fa-solid fa-xmark"></i>
+                                <img onClick={() => handleRemovePaymentToken(token)} className="fa-solid fa-xmark" src={cross} alt='' ></img>
                             )}
                         </p>
                     ))}
@@ -657,7 +669,7 @@ function CreateCollection() {
                 <div className={`tokensDropdown ${isOpenTokens ? "active" : ""}`} ref={dropdownRefTokens} >
                     <button className="tokensDropdownBtn" onClick={toggleDropdownTokens} >
                         <p><img className='tokensLogo' src={select} alt="" /> Add Token</p>
-                        <i className={`fa-solid fa-angle-${isOpenTokens ? 'up' : 'down'}`}></i>
+                        <img className='nftTokensArrowBtn'  src={isOpenTokens ? upArrow: downArrow} alt='' ></img>
                     </button>
                     <div className="tokensList">
                         {tokensFilteredItems.map((item) => (
@@ -681,7 +693,7 @@ function CreateCollection() {
                 {/*////////////////EXPLICIT AND SENSITIVE/////////////////  */}
                 <h2 className='collectionExplicitContent' >Explicit and Sensitive Content </h2>
                 <p id='collectionExplicitContentDesc' > Set this collection as explicit and sensitive content.</p>
-                <button className='explicitContentInfoBtn' ><i className="fa-solid fa-circle-info "></i> </button>
+                <button className='explicitContentInfoBtn' ><img className='fa-solid fa-circle-info ' src={info} alt="" /> </button>
                 <div id="explicitContentInfoDialogue">
                     Setting your collection as explicit and sensitive <br /> content, like pornography and other not safe for <br /> work (NSFW) content, will protect users with safe <br /> search while browsing NFTConnect. <a href="/"> Learn more about explicit content at NFTConnect here. </a>
                 </div>
@@ -702,7 +714,7 @@ function CreateCollection() {
                 {/*////////////////RANKINGS/////////////////  */}
                 <h2 className='collectionRankings' >Open Rarity Rankings </h2>
                 <p id='collectionRankingsDesc' > Turn on after all items revealed and attribute metadata is finalized.</p>
-                <button className='collectionRankingInfoBtn' ><i className="fa-solid fa-circle-info "></i> </button>
+                <button className='collectionRankingInfoBtn' > <img className='fa-solid fa-circle-info ' src={info} alt="" /> </button>
                 <div id="collectionRankingsInfoDialogue">
                     Open Rarity rankings are currently only <br /> supported for ERC-721 collections that have <br /> trait data and string traits. <a href="/">Learn More</a>
                 </div>

@@ -1,6 +1,11 @@
 import React from 'react'
 import './stylesheet/Footer.css'
 import logo from './img/NFTConnects.jpeg'
+import facebook from './img/facebook.png'
+import gmail from './img/gmail.png'
+import github from './img/github.png'
+import instagram from './img/instagram.png'
+import twitter from './img/twitter.png'
 
 function Footer() {
     return (
@@ -17,19 +22,19 @@ function Footer() {
                         <h1 className='social-handles' >Join Our Community</h1>
                         <div className="footer-icons">
                             <a href="/">
-                            <i class="fa-brands fa-twitter"></i>
+                            <img src={twitter} alt="" />
                             </a>
                             <a href="/">
-                            <i class="fa-brands fa-instagram"></i>
+                            <img src={instagram} alt="" />
                             </a>
                             <a href="/">
-                            <i class="fa-brands fa-github"></i>
+                            <img src={github} alt="" />
                             </a>
                             <a href="/">
-                            <i class="fa-brands fa-facebook-f"></i>
+                            <img src={facebook} alt="" />
                             </a>
                             <a href="/">
-                            <i class="fa-regular fa-envelope"></i>
+                            <img src={gmail} alt="" />
                             </a>
                         </div>
                     </div>

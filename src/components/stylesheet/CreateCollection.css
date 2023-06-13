@@ -16,9 +16,11 @@
     text-decoration: none;
     color: gray;
 }
-.createCollectionNavigation i{
+.createCollectionNavigation img{
     margin-left: 5px;
     margin-top: 4px;
+    width: 20px;
+    height: 20px;
 }
 .createCollectionNavigation p{
     position: relative;
@@ -319,14 +321,12 @@
     width: 150px;
     font-weight: bold;
     font-size: 15px;
-}
-.nftCategoryDropdownBtn .fa-angle-down{
+} 
+.nftCategoryDropdownBtn .nftCategoryArrowBtn{
     margin-left: 260px;
     margin-top: 15px;
-}  
-.nftCategoryDropdownBtn .fa-angle-up{
-    margin-left: 260px;
-    margin-top: 15px;
+    width: 20px;
+    height: 20px;
 }  
 .nftCategoryList {
     display: none;
@@ -336,7 +336,7 @@
     width: 450px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-}  
+} 
 .nftCategoryList p {
     color: black;
     position: relative;
@@ -421,8 +421,10 @@ background-color: gray;
 .input-container input {
     padding-left: 30px;
 }  
-.input-container i {
+.input-container img {
     position: absolute;
+    width: 20px;
+    width: 20px;
     left: 260px;
     top: 50%;
     transform: translateY(-50%);
@@ -478,16 +480,19 @@ background-color: gray;
     box-shadow: none;
     border: solid 1px gray;
 }
-#input-container i {
+#input-container img {
     position: absolute;
-    left: 60px;
+    left: 55px;
     top: 50%;
+    width: 20px;
+    height: 20px;
     transform: translateY(-50%);
 }
-.fa-trash{
+.categoryDelBtn img{
     position: relative;
-    top: 10px;
-    height: 35px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
 }
 .categoryDelBtn{
     border-radius: 50%;
@@ -497,10 +502,10 @@ background-color: gray;
     background-color: white;
     align-items: center;
     justify-content: center;
-    margin-left: 680px;
+    margin-left: 685px;
     padding: 2px;
     /* bottom: 35px; */
-    top: 205px;
+    top: 207px;
     width: 40px;
     height: 40px;
 }
@@ -535,9 +540,13 @@ background-color: gray;
     color: gray;
     margin-left: 250px;
 }
-.fa-circle-info{
+.blockchainInfoBtn .fa-circle-info{
+    position: relative;
     color: #000;
     margin-left: 5px;
+    width: 15px;
+    height: 15px;
+    top: 2px;
 }
 .blockchainInfoBtn{
     background: none;
@@ -600,13 +609,11 @@ background-color: gray;
     font-weight: bold;
     font-size: 15px;
 }
-.blockchainDropdownBtn .fa-angle-down{
+.blockchainDropdownBtn .nftBlockchainArrowBtn{
     margin-left: 300px;
     margin-top: 15px;
-}  
-.blockchainDropdownBtn .fa-angle-up{
-    margin-left: 300px;
-    margin-top: 15px;
+    width: 20px;
+    height: 20px;
 }  
 .blockchainsList {
     display: none;
@@ -704,13 +711,11 @@ background-color: gray;
     font-weight: bold;
     font-size: 15px;
 }
-.tokensDropdownBtn .fa-angle-down{
+.tokensDropdownBtn .nftTokensArrowBtn{
     margin-left: 300px;
     margin-top: 15px;
-}  
-.tokensDropdownBtn .fa-angle-up{
-    margin-left: 300px;
-    margin-top: 15px;
+    width: 20px;
+    height: 20px;
 }  
 .tokensList {
     display: none;
@@ -746,6 +751,12 @@ background-color: gray;
     height: 20px;
     width: 20px;
 }
+.fa-xmark{
+    position: relative;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+}
 
 /* ///////////DISPLAY THEME//////////// */
 
@@ -772,6 +783,9 @@ background-color: gray;
     color: #000;
     /* bottom: 89px; */
     margin-left: 140px;
+    top: 2px;
+    width: 15px;
+    height: 15px;
 }
 .explicitContentInfoBtn{
     background: none;
@@ -878,8 +892,10 @@ background-color: gray;
 .collectionRankingInfoBtn .fa-circle-info{
     position: relative;
     color: #000;
+    width: 15px;
+    height: 15px;
+    top: 2px;
     /* bottom: 89px; */
-    
     margin-left: 140px;
 }
 .collectionRankingInfoBtn{

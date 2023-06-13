@@ -8,6 +8,10 @@ import DropsMenu from "./Menus/DropsMenu"
 import StatsMenu from "./Menus/StatsMenu"
 import ResourcesMenu from "./Menus/ResourcesMenu"
 import ProfileMenu from "./Menus/ProfileMenu"
+import wallet from './img/wallet.png'
+import user from './img/user.png'
+import cart from './img/cart.png'
+import search from './img/search.png'
 
 function Navbar() {
 
@@ -73,7 +77,7 @@ function Navbar() {
                     </div>
                 </a>
                 <div className='search-box'>
-                    <i className="fi fi-rs-search icon"></i>
+                    <img src={search} alt="" />
                     <div className='search' >
                         <input id='input' type="text" placeholder='Search items, collections and accounts' />
                     </div>
@@ -93,12 +97,12 @@ function Navbar() {
                     </li>
                 </ul>
                 <ul className='icons-menu' >
-                    <li ref={profileRef} ><button className='nav-buttons' onMouseOver={() => setProfileMenuOpen(true)}  ><i className="fa-regular fa-user"></i></button>
+                    <li ref={profileRef} ><button className='nav-buttons' onMouseOver={() => setProfileMenuOpen(true)}  > <img src={user} alt="" /> </button>
                         {isProfileMenuOpen && <ProfileMenu />}
                     </li>
-                    <li  ><button onClick={togglePopup} className='nav-buttons'><i className="fa-solid fa-wallet"></i></button>
+                    <li  ><button onClick={togglePopup} className='nav-buttons'> <img src={wallet} alt="" /></button>
                     </li>
-                    <li><button className='nav-buttons' ><i className="fa-solid fa-cart-shopping"></i></button>
+                    <li><button className='nav-buttons' ><img src={cart} alt="" /> </button>
                     </li>
                 </ul>
             </div>

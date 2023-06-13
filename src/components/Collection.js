@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import star from './img/star.png'
+import downArrow from './img/downArrow.png'
+import search from './img/search.png'
+import bars from './img/bars.png'
+import share from './img/share.png'
+import flag from './img/flag.png'
+import website from './img/website.png'
 import './stylesheet/Collection.css'
 
 function Collection(props) {
@@ -37,10 +44,10 @@ function Collection(props) {
                     <div id='collectionTitle' >
                         <h1 id='collectionName' >{props.title}</h1>
                         <div className='collectionIcons' >
-                            <Link to='/' className='iconLink'><i className="fa-solid fa-globe"></i></Link>
-                            <Link to='/' className='iconLink'><i className="fa-regular fa-star"></i></Link>
-                            <Link to='/' className='iconLink'><i className="fa-solid fa-share-nodes"></i></Link>
-                            <Link to='/' className='iconLink'><i className="fa-regular fa-flag"></i></Link>
+                            <Link to='/' className='iconLink'> <img src={website} alt="" /> </Link>
+                            <Link to='/' className='iconLink'><img src={star} alt="" /></Link>
+                            <Link to='/' className='iconLink'><img src={share} alt="" /></Link>
+                            <Link to='/' className='iconLink'><img src={flag} alt="" /></Link>
                         </div>
                     </div>
                     <p id='collectionAuthor' >By  <Link id='Link' to='/' >{props.author}</Link> </p>
@@ -66,19 +73,19 @@ function Collection(props) {
                     </div>
                     <hr className='hr' />
                     <div className='sortMenu' >
-                        <button className='filterBtn' ><i className="fa-solid fa-bars "></i></button>
+                        <button className='filterBtn' > <img src={bars} alt="" /> </button>
                         <div className="dot"></div>
                         <p className='live' >Live</p>
                         <p className='beta' >BETA</p>
                         <p className='resultsNo' >976 Results</p>
                         <div id='search-box'>
-                            <i className="fi fi-rs-search icon"></i>
+                            <img src={search} alt="" />
                             <div id='search' >
                                 <input id='input' type="text" placeholder='Search items, collections and accounts' />
                             </div>
                         </div>
                         <div id='dropdown' >
-                            <button id='btn-time' >Price low to high <i className="fa-solid fa-chevron-down"></i></button>
+                            <button id='btn-time' >Price low to high<img src={downArrow} alt="" /> </button>
                             <div id='dropdown-content' >
                                 <p>Price low to high</p>
                                 <hr />

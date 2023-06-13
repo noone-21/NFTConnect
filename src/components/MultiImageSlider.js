@@ -4,6 +4,8 @@ import NFT1 from './img/NFT1.jpg'
 import NFT2 from './img/NFT2.png'
 import NFT3 from './img/NFT3.jpg'
 import NFT4 from './img/NFT4.jpg'
+import leftArrow from './img/leftArrow.png'
+import rightArrow from './img/rightArrow.png'
 
 
 function MultiImageSlider() {
@@ -53,7 +55,7 @@ function MultiImageSlider() {
     return (
         <>
             <div id='image-slider-multi' >
-                <button id="prev-multi" onClick={prevButton} ><i className="fa-solid fa-circle-chevron-left"></i></button>
+                <button id="prev-multi" onClick={prevButton} > <img src={leftArrow} alt="" /> </button>
 
                 <div id='image-container-multi' >
                     <img id="img-multi" src={images[currentImageIndex1]} alt="NFT" />
@@ -107,7 +109,7 @@ function MultiImageSlider() {
                     </div>
                 </div>
 
-                <button id="next-multi" onClick={nextButton} ><i className="fa-solid fa-circle-chevron-right"></i></button>
+                <button id="next-multi" onClick={nextButton} > <img src={rightArrow} alt="" /></button>
             </div>
 
         </>

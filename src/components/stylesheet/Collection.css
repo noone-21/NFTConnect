@@ -49,8 +49,10 @@
     height: 30px;
 }
 
-.collectionIcons i{
+.collectionIcons img{
     margin: 0 20px;
+    width: 20px;
+    height: 20px;
     padding: 3px;
     font-size: 20px;
 }
@@ -206,9 +208,11 @@
       color: black;
       padding: 5px 0;
   }
-  #search-box i {
+  #search-box img {
     position: absolute;
-    margin: 2px 0 0 1px;
+    width: 20px;
+    height: 20px;
+    margin: 8px 0 0 3px;
     font-size: small;
     color: black;
   }
@@ -230,11 +234,15 @@
 }
 
 .filterBtn{
-    padding: 5px;
+    padding: 3px;
     background: none;
     position: relative;
     border: none;
-    /* bottom: 12px; */
+    bottom: 2px;
+}
+.filterBtn img{
+  width: 15px;
+  height: 15px;
 }
 .filterBtn:hover{
     border-radius: 50%;
@@ -280,6 +288,13 @@
   }
   #btn-time:focus + #dropdown-content {
     display: block;
+  }
+  #btn-time img{
+    position: relative;
+    left: 7px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
   }
   #btn-time{
     /* margin-top: 50px;
