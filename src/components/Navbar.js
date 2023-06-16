@@ -12,8 +12,13 @@ import wallet from './img/wallet.png'
 import user from './img/user.png'
 import cart from './img/cart.png'
 import search from './img/search.png'
+import cross from './img/cross.png'
+import WalletPopup from './WalletPopup';
+import ConnectedWallet from './ConnectedWallet';
 
 function Navbar() {
+
+    const [walletAddress, setWalletAddress] = useState(true)
 
     // const exploreRef = useRef(null); // Create a reference for dropdown container
     const dropsRef = useRef(null); // Create a reference for dropdown container
@@ -64,6 +69,11 @@ function Navbar() {
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
+      };
+    const handleOverlayClick = (event) => {
+        if (event.target.classList.contains('popup-overlay')) {
+          togglePopup();
+        }
     };
 
 
@@ -100,7 +110,17 @@ function Navbar() {
                     <li ref={profileRef} ><button className='nav-buttons' onMouseOver={() => setProfileMenuOpen(true)}  > <img src={user} alt="" /> </button>
                         {isProfileMenuOpen && <ProfileMenu />}
                     </li>
-                    <li  ><button onClick={togglePopup} className='nav-buttons'> <img src={wallet} alt="" /></button>
+                    <li  ><button onClick={togglePopup} className='nav-buttons'> <img src={wallet} alt="" />
+                    </button>
+                        {isOpen && (
+                            <div className={`walletPopupOverlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
+                                <div className="walletPopupContent" >
+                                    {walletAddress?<ConnectedWallet/>:<WalletPopup/>}
+                                    
+                                    <button onClick={togglePopup}><img className='walletPopupCloseBtn' src={cross} alt="" /></button>
+                                </div>
+                            </div>
+                        )}
                     </li>
                     <li><button className='nav-buttons' ><img src={cart} alt="" /> </button>
                     </li>

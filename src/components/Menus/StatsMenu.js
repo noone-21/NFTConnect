@@ -1,4 +1,4 @@
-import './Menu.css'
+import '../stylesheet/Menu.css'
 
 export default function StatsMenu() {
     return (

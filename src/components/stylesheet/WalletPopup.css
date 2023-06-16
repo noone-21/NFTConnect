@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.walletPopup{
+  position: relative;
+  top: 30px;
+  width: 250px;
+  border: none;
+}
+.walletPopupHeading{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+.walletPopupMetaMask{
+  position: relative;
+  background-color:beige;
+  border-radius: 10px;
+  align-items: center;
+  top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.walletPopupMetaMask p{
+  font-size: 20px;
+  position: relative;
+  bottom: 15px;
+  left: 50px;
+}
+.walletPopupMetaMask img{
+  position: relative;
+  top: 20px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+}

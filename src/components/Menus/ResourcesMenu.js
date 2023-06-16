@@ -1,4 +1,4 @@
-import './ResourcesMenu.css'
+import '../stylesheet/ResourcesMenu.css'
 
 export default function ResourcesMenu() {
     return (
