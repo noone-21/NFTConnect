@@ -1,7 +1,8 @@
 import React from 'react'
 import './stylesheet/Navbar.css';
 import logo from './img/logo.png'
-import { useState, useRef } from "react"
+import { useState, useRef, useContext } from "react"
+import { WalletContext } from '../context/WalletContext';
 import { useOnHoverOutside } from "../hooks/UseOnHoverOutside"
 // import ExploreMenu from "./Menus/ExploreMenu"
 import DropsMenu from "./Menus/DropsMenu"
@@ -18,7 +19,7 @@ import ConnectedWallet from './ConnectedWallet';
 
 function Navbar() {
 
-    const [walletAddress, setWalletAddress] = useState(true)
+    const [isWalletAddress, setIsWalletAddress] = useContext(WalletContext)
 
     // const exploreRef = useRef(null); // Create a reference for dropdown container
     const dropsRef = useRef(null); // Create a reference for dropdown container
@@ -69,12 +70,29 @@ function Navbar() {
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
-      };
+    };
     const handleOverlayClick = (event) => {
         if (event.target.classList.contains('popup-overlay')) {
-          togglePopup();
+            togglePopup();
         }
     };
+
+    const [isLoading, setIsLoading] = useState(false);
+
+  // Function to simulate loading process
+  const simulateLoading = () => {
+    // Simulate loading delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  };
+
+  // Handle wallet address change
+  const handleWalletAddressChange = (address) => {
+    setIsWalletAddress(!isWalletAddress)
+    setIsLoading(true);
+    simulateLoading();
+  };
 
 
     return (
@@ -115,9 +133,19 @@ function Navbar() {
                         {isOpen && (
                             <div className={`walletPopupOverlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
                                 <div className="walletPopupContent" >
-                                    {walletAddress?<ConnectedWallet/>:<WalletPopup/>}
-                                    
-                                    <button onClick={togglePopup}><img className='walletPopupCloseBtn' src={cross} alt="" /></button>
+                                    {isLoading ? (
+                                        <div className='walletSwitchLoading' ></div>
+                                    ) : (
+                                        <>
+                                            {isWalletAddress ? (
+                                                <ConnectedWallet onWalletAddressChange={handleWalletAddressChange} />
+                                            ) : (
+                                                <WalletPopup onWalletAddressChange={handleWalletAddressChange} />
+                                            )}
+                                        </>
+                                    )}
+
+                                    <img onClick={togglePopup} className='walletPopupCloseBtn' src={cross} alt="" />
                                 </div>
                             </div>
                         )}

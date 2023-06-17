@@ -182,7 +182,6 @@
     background-color: #fff;
     padding: 20px;
     top: 70px;
-    /* width: 250px; */
     height: 80%;
     right: 10px;
   }
@@ -194,6 +193,7 @@
   .walletPopupCloseBtn{
     position: fixed;
     right: 30px;
+    cursor: pointer;
     align-items: flex-end;
     justify-content: end;
     top: 90px;
@@ -201,5 +201,31 @@
     border: none;
     width: 15px;
     height: 15px;
+  }
+  .walletSwitchLoading{
+    position: relative;
+    top: 200px;
+  }
+
+  .walletSwitchLoading {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #7c9db3;
+    width: 50px;
+    height: 50px;
+    margin: 0 100px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   

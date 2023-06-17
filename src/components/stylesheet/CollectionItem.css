@@ -9,8 +9,27 @@
   margin: 10px;
 }
 
-.collection-cover-photo img {
+.collectionTools{
+  position:absolute;
+  /* padding: 5 15px; */
+  /* z-index: 1; */
+  top: 5px;
+  left: 200px;
+  display: flex;
+  border-radius: 20px;
+  background-color: rgba(250, 249, 249, 0.2) ;
+  border: 1px solid  rgba(128, 128, 128, 0.2);
+}
+.editCollectionBtn, .collectionEarningBtn, .deleteCollectionBtn{
+  cursor: pointer;
+  padding: 5px 10px ;
+  height: 10px;
+  width: 10px;
+}
+
+.collectionCoverImg{
   position: relative;
+  z-index: -1;
   width: 100%;
   height: 130px;
 }
