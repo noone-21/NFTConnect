@@ -1,157 +1,154 @@
-.navbar{
-    /* background-color: #0d5366; */
-    display: flex;
-    width: max-content;
-    position: fixed;
-    z-index: 1;
-  }
-  .logo-title.white {
-    color: black;
-  }
-  .navbar.scrolled{
-    /* background-image: linear-gradient(180deg,#185363, #DEF2F1); */
-    background-color: #DEF2F1;
-  }
-  /* #navbar{
+.navbar {
+  /* background-color: #0d5366; */
+  display: flex;
+  width: max-content;
+  position: fixed;
+  z-index: 1;
+}
+.logo-title.white {
+  color: black;
+}
+.navbar.scrolled {
+  /* background-image: linear-gradient(180deg,#185363, #DEF2F1); */
+  background-color: #def2f1;
+}
+/* #navbar{
     height: 70px;
     background-color: #0d5366; 
     background-image: linear-gradient(180deg,#185363, #DEF2F1);
   } */
-  .search{
-    height: 40px;
-    width: 500px;
-    border-radius: 10px;
-    /* margin: 0px 0 0 0px; */
-
-  }
-  .search-box.scrolled{
-    background-color: #DEF2F1;
-    /* background-image: linear-gradient(180deg,#c2c2c2, #DEF2F1); */
+.search {
+  height: 40px;
+  width: 500px;
+  border-radius: 10px;
+  /* margin: 0px 0 0 0px; */
 }
-#input{
-    height: 40px;
-    margin:0px 0 0px 26px;
-    padding: 0;
-    width: 455px;
-    font-size: medium;
-    /* border: none; */
-    border-color: #DEF2F1;
-    border-width: 0px;
-    background: none;
-  }
-  #input::placeholder {
-      font: 18px sans-serif;
-      color: black;
-      padding: 5px 0;
-  }
-  .nav-logo{
-    background-color: #1a6661;
-    margin: 0px 0px 0 5px;
-    height: 40px;
-    width: 80px;
-    padding: 5px;
-    border-radius: 30px;
+.search-box.scrolled {
+  background-color: #def2f1;
+  /* background-image: linear-gradient(180deg,#c2c2c2, #DEF2F1); */
 }
-.navbarLogo{
-    display: flex;
-    margin: 10px 0px 0 5px;
+#input {
+  height: 40px;
+  margin: 0px 0 0px 26px;
+  padding: 0;
+  width: 455px;
+  font-size: medium;
+  /* border: none; */
+  border-color: #def2f1;
+  border-width: 0px;
+  background: none;
 }
-.logo-title{
-    margin: 8px 10px 0 5px;
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  /* .logo-title.scrolled{
+#input::placeholder {
+  font: 18px sans-serif;
+  color: black;
+  padding: 5px 0;
+}
+.nav-logo {
+  background-color: #1a6661;
+  margin: 0px 0px 0 5px;
+  height: 40px;
+  width: 80px;
+  padding: 5px;
+  border-radius: 30px;
+}
+.navbarLogo {
+  display: flex;
+  margin: 10px 0px 0 5px;
+}
+.logo-title {
+  margin: 8px 10px 0 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+/* .logo-title.scrolled{
     color: #000000;
   } */
-  a{
-    text-decoration: none;
-  }
-  .search-box img {
-    position: absolute;
-    margin: 8px 0 0 3px;
-    height: 20px;
-    width: 20px;
-    color: black;
-  }
-  
-  .search-box {
-    height: 40px;
-    width: 480px;
-    margin: 15px;
-    border-radius: 10px;
-    background-color: gray;
-    opacity: 0.4;
-  }
+a {
+  text-decoration: none;
+}
+.search-box img {
+  position: absolute;
+  margin: 8px 0 0 3px;
+  height: 20px;
+  width: 20px;
+  color: black;
+}
+
+.search-box {
+  height: 40px;
+  width: 480px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: gray;
+  opacity: 0.4;
+}
 
 .search-box {
   border: 1px solid gray;
 }
 
-  .search-box:hover{
-    background-color: #DEF2F1;
-    opacity: 1;
-  }
-  .search-box:hover input::placeholder{
-   color: gray;
-  }
-  .search-box:hover img{
-   color: gray;
-  }
-  
-  .icon {
-    padding: 10px;
-    min-width: 10px;
-  }
-  ul{
-    padding: 0;
-    display: flex;
-    list-style: none;
-  }
-  .menu-items{
-    margin: 15px 5px 15px 10px;
-    align-content: center;
-  }
-  .menu-items li{
-    width: 70px;
-    align-items:initial;
-  }
-  .icons-menu{
-    margin: 15px 5px;
-  }
-  .icons-menu li{
-    width: 20px;
-    padding: 0 15px;
-  }
-  li{
-    margin: 10px 20px;
-    padding: 0;
-    align-items: center;
-    align-content: center;
-  }
-  .nav-buttons{
-    font-size: larger;
-    font-weight: bold;
-    font-family: 'Signika Negative', sans-serif;
-    text-decoration: none;
-    color: #17252A;
-    position: relative;
-    background: none;
-    border: none;
-    padding: 0;
-  }
-  input:focus{
-    outline: none;
-  }
+.search-box:hover {
+  background-color: #def2f1;
+  opacity: 1;
+}
+.search-box:hover input::placeholder {
+  color: gray;
+}
+.search-box:hover img {
+  color: gray;
+}
 
+.icon {
+  padding: 10px;
+  min-width: 10px;
+}
+ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.menu-items {
+  margin: 15px 5px 15px 10px;
+  align-content: center;
+}
+.menu-items li {
+  width: 70px;
+  align-items: initial;
+}
+.icons-menu {
+  margin: 15px 5px;
+}
+.icons-menu li {
+  width: 20px;
+  padding: 0 15px;
+}
+li {
+  margin: 10px 20px;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+}
+.nav-buttons {
+  font-size: larger;
+  font-weight: bold;
+  font-family: "Signika Negative", sans-serif;
+  text-decoration: none;
+  color: #17252a;
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+}
+input:focus {
+  outline: none;
+}
 
-
-.nav-buttons img{
+.nav-buttons img {
   width: 30px;
   height: 30px;
-}  
+}
 
 .walletPopupOverlay {
   position: fixed;
@@ -166,66 +163,83 @@
   z-index: 999;
   transition: opacity 0.3s, transform 0.8s;
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   pointer-events: none;
   /* backdrop-filter: blur(5px);  */
-  }
-  .walletPopupOverlay.active {
-    opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
-  }
-  
-  .walletPopupContent {
-    position: relative;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 20px;
-    top: 70px;
-    height: 80%;
-    right: 10px;
-  }
-  
-  .walletPopupContent h1,
-  .walletPopupContent p {
-    margin: 0;
-  }
-  .walletPopupCloseBtn{
-    position: fixed;
-    right: 30px;
-    cursor: pointer;
-    align-items: flex-end;
-    justify-content: end;
-    top: 90px;
-    background: none;
-    border: none;
-    width: 15px;
-    height: 15px;
-  }
-  .walletSwitchLoading{
-    position: relative;
-    top: 200px;
-  }
+}
+.walletPopupOverlay.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
 
-  .walletSwitchLoading {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #7c9db3;
-    width: 50px;
-    height: 50px;
-    margin: 0 100px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
+.walletPopupContent {
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  top: 70px;
+  height: 80%;
+  right: 10px;
+  animation: slideIn 0.8s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
   }
-  
-  /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  100% {
+    transform: translateX(0%);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+}
+
+.walletPopupContent h1,
+.walletPopupContent p {
+  margin: 0;
+}
+.walletPopupCloseBtn {
+  position: fixed;
+  right: 20px;
+  cursor: pointer;
+  align-items: flex-end;
+  justify-content: end;
+  top: 20px;
+  background: none;
+  border: none;
+  width: 15px;
+  height: 15px;
+}
+.walletSwitchLoading {
+  position: relative;
+  top: 200px;
+}
+
+.walletSwitchLoading {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #7c9db3;
+  width: 50px;
+  height: 50px;
+  margin: 0 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

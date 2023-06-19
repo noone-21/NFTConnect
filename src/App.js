@@ -14,6 +14,7 @@ import { CollectionsProvider } from './context/CollectionContext';
 import CreateCollection from './components/CreateCollection';
 import MyCollections from './components/MyCollections';
 import SellNFT from './components/SellNFT';
+import EditCollection from './components/EditCollection';
 
 function App() {
 
@@ -64,6 +65,7 @@ function App() {
           <Route exact path='/createnft' element={<CreateNft />} ></Route>
           <Route exact path='/createcollection' element={<CreateCollection />} ></Route>
           <Route exact path='/mycollections' element={<MyCollections />} ></Route>
+          <Route path='/mycollections/editcollection/:id' element={<EditCollection/>} ></Route>
           <Route exact path='/sellNFT' element={<SellNFT />} ></Route>
         </Routes>
       </Router>

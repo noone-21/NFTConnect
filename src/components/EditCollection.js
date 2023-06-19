@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
+import { useParams } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import Navbar from './Navbar'
 import './stylesheet/CreateCollection.css'
@@ -33,16 +34,30 @@ import sand from './img/sand.png'
 import eth from './img/eth.png'
 import weth from './img/weth.png'
 
-function CreateCollection() {
+function EditCollection() {
 
-    const [myCollections, setMyCollections] = useContext(CollectionsContext);
+    const { id } = useParams();
+
+
+    // const [myCollections, setMyCollections] = useContext(CollectionsContext);
+    const [myCollections, setMyCollections] = useState([])
+    useEffect(() => {
+        const storedCollections = localStorage.getItem('myCollections');
+        if (storedCollections) {
+          setMyCollections(JSON.parse(storedCollections));
+        }
+      }, [setMyCollections]);
+
+    const foundCollection = myCollections.find((collection) => collection.collectionId === id);
+
+    console.log(foundCollection)
 
 
     // ////////////////////MY COLLECTION ARRAY////////////////
 
     // //////////////////NEW COLLECTION OBJECT///////////////
     const [collectionData, setCollectionData] = useState({
-        collectionId: uuidv4(),
+        collectionId: 0,
         logoImage: '',
         featuredImage: '',
         bannerImage: '',
@@ -148,7 +163,7 @@ function CreateCollection() {
             ...prevData,
             Name: value,
         }));
-        
+
     };
 
 
@@ -407,7 +422,7 @@ function CreateCollection() {
     const [error, setError] = useState('');
 
     const handleCreateCollection = () => {
-        
+
         // const collectionExists = myCollections.some(
         //     (collection) =>
         //         collection.Name === collectionData.Name ||
@@ -434,7 +449,7 @@ function CreateCollection() {
         // Store the updated collections in localStorage
 
         setCollectionData({
-            collectionId: uuidv4(),
+            collectionId: collectionData.collectionId + 1,
             logoImage: '',
             featuredImage: '',
             bannerImage: '',
@@ -469,8 +484,6 @@ function CreateCollection() {
     // localStorage.clear()
 
 
-
-
     return (
         <>
             <Navbar />
@@ -479,11 +492,11 @@ function CreateCollection() {
                 <div className='createCollectionNavigation' >
                     <a href="/mycollections">My Collections</a>
                     <img className="fa-solid fa-arrow-right" src={rightArrows} alt="" />
-                    <p>Create a Collection</p>
+                    <p>Edit Collection</p>
                 </div>
 
                 {/* /////////////MAIN HEADING////////////// */}
-                <h1 className='createCollectionHeading' >Create a Collection</h1>
+                <h1 className='createCollectionHeading' >Edit Your Collection</h1>
                 <p id='sterric' >*</p>
                 <p id='required' >Required fields</p>
 
@@ -592,7 +605,7 @@ function CreateCollection() {
                 <div className="input-container">
                     <img src={twitter} alt="" />
                     <input className='createCollectionInput6' type="text" placeholder='https://twitter.com/
-                    abcdef' value={collectionData.links.Twitter || ''}
+                abcdef' value={collectionData.links.Twitter || ''}
                         onChange={handleCollectionTwitterLinkChange} />
                 </div>
 
@@ -744,4 +757,4 @@ function CreateCollection() {
     )
 }
 
-export default CreateCollection
+export default EditCollection

@@ -132,7 +132,7 @@ function Navbar() {
                     </button>
                         {isOpen && (
                             <div className={`walletPopupOverlay ${isOpen ? 'active' : ''}`} onClick={handleOverlayClick}>
-                                <div className="walletPopupContent" >
+                                <div className="walletPopupContent"  >
                                     {isLoading ? (
                                         <div className='walletSwitchLoading' ></div>
                                     ) : (

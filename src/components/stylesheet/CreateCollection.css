@@ -202,6 +202,8 @@
     border-width: 1px;
 }
 
+  
+
 
 /* ///////////////COLLECTION URL////////////// */
 .createCollectionURL{
@@ -998,4 +1000,9 @@ background-color: gray;
     padding: 10px;
     border-radius: 5px;
     border: none
+}
+.createNewCollectionBtn:disabled,
+.createNewCollectionBtn[disabled] {
+  background-color: rgba(58, 175, 169, 0.4);
+  cursor: auto;
 }

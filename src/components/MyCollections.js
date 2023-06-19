@@ -71,10 +71,11 @@ function MyCollections() {
           </div>
         )}
         <div id="myCollection">
-          {myCollections.length === 0 && 'No Collections To Display'}
+          {myCollections.length === 0 && ''}
           {myCollections.map((collection) => {
             return <CollectionItem
               key={collection.collectionId}
+              collectionId={collection.collectionId}
               profilePicture={collection.logoImage}
               coverPhoto={collection.featuredImage}
               collectionName={collection.Name}
