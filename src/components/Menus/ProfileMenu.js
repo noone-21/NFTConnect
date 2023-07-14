@@ -9,7 +9,7 @@ export default function ProfileMenu() {
                 <button><Link to='/'>Profile</Link></button>
                 <button><Link to='/'>Favorites</Link></button>
                 <button><Link to='/'>Watchlist</Link></button>
-                <button><Link to='/mycollections' >My Collections</Link></button>
+                <button><Link to='/mynfts' >My NFTs</Link></button>
                 <button><Link to='/createnft'>  Create</Link></button>
                 <button><Link to='/'>Settings</Link></button>
                 <button><Link to='/'>Language</Link></button>

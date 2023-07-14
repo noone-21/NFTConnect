@@ -1,30 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
-.myCollectionsPage{
+.myNftsPage{
     position: absolute;
 }
 
-.myCollectionsHeading{
+.myNftsHeading{
     position: relative;
-    margin-top: 130px;
+    margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
     margin-left: 50px;
 }
 
-.myCollectionsInfoBtn{
+.myNftsInfoBtn{
     background: none;
     position: relative;
-    margin-left: 410px;
+    margin-left: 220px;
     bottom: 32px;
     border: none;
 }
-.myCollectionsInfoBtn img{
+.myNftsInfoBtn img{
   position: relative;
   top: 3px;
   width: 15px;
   height: 15px;
 }
-.myCollectionsDesc{
+.myNftsDesc{
     position: relative;
     /* top: 50px; */
     /* bottom: 20px; */
@@ -53,13 +53,13 @@
     transition: opacity 0.3s, visibility 0.3s;
   }
 
-  .myCollectionsInfoBtn:hover + .info-dialogue, .info-dialogue:hover {
+  .myNftsInfoBtn:hover + .info-dialogue, .info-dialogue:hover {
     opacity: 1;
     visibility: visible;
   }
 
 
-  .createCollectionBtn{
+  .createNftBtn{
     position: relative;
     bottom: 140px;
     width: 150px;
@@ -109,13 +109,48 @@
     background-color: #f1f1f1;
   }
 
-  #myCollection {
+  #myNft {
     position: relative;
     bottom: 90px;
     margin-left: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
     grid-gap: 10px; /* Add some gap between the items */
+  }
+
+  .myNftLoading {
+    position: relative;
+    top: 10px;
+  }
+  
+  .myNftLoading {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1bacb6;
+    width: 150px;
+    height: 150px;
+    margin: 0 100px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
 

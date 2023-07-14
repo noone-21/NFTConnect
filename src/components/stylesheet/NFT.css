@@ -1,0 +1,182 @@
+.nftPage {
+  /* width: 1349px; */
+  height: 100%;
+  display: flex;
+}
+
+.nftHeader {
+  position: relative;
+}
+
+#nftChain {
+  position: relative;
+  left: 50px;
+  top: 20px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+}
+
+.nftImage {
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+  top: 10px;
+  width: 50%;
+  margin-left: 20px;
+  border-radius: 10px;
+  height: 400px;
+  position: relative;
+}
+
+.nftBody {
+  position: relative;
+  /* width: 480px; */
+  left: 50px;
+}
+
+#nftName {
+  display: flex;
+  position: relative;
+  width: 500px;
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.nftDescription {
+  display: flex;
+  color: gray;
+  position: relative;
+  width: 500px;
+  font-size: 15px;
+}
+.nftProperties{
+  position: relative;
+  display: flex;
+}
+.nftProperties p{
+  
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+}
+.nftProperties img{
+  position: relative;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+}
+.nftProperties .favorite{
+  cursor: pointer;
+}
+
+
+
+.nftLoading {
+  position: relative;
+  top: 200px;
+  left: 500px;
+  border: 16px solid #f0f0f0;
+  border-radius: 50%;
+  border-top: 16px solid #22c9bb;;
+  width: 150px;
+  height: 150px;
+  margin: 0 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.nftPriceLabel{
+  position: relative;
+  font-size: 1rem;
+  top: 10px;
+  color: grey;
+}
+.nftPriceAmount{
+  position: relative;
+  display: flex;
+  height: 80px;
+}
+.nftPrice{
+  position: relative;
+  font-size: 1.8rem;
+  bottom: 30px;
+  left: -10px;
+  font-weight: bold;
+}
+.nftPriceRs{
+  position: relative;
+  left: -10px;
+  top: 5px;
+}
+.priceLoading {
+  position: relative;
+  top: 20px;
+  left: 50px;
+  border: 16px solid #f0f0f0;
+  border-radius: 50%;
+  border-top: 16px solid #22c9bb;;
+  width: 50px;
+  height: 50px;
+  margin: 0 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+#buyNft{
+  position: relative;
+  width: 350px;
+  font-size: 1.3rem;
+  height: 60px;
+  top: 40px;
+  background-color: #3AAFA9;
+  color: #FFFFFF;
+  /* padding: 30px; */
+  /* padding-bottom: 50px; */
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+#buyNft img{
+  position: relative;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+}
+#buyNft p{
+  position: relative;
+  bottom: 6px;
+  left: 5px;
+}
+#buyNft:disabled,
+#buyNft[disabled] {
+  background-color: rgba(58, 175, 169, 0.4);
+  
+  cursor: auto;
+}
+
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+

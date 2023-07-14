@@ -1,8 +1,9 @@
 .navbar {
   /* background-color: #0d5366; */
   display: flex;
-  width: max-content;
+  width: 100%;
   position: fixed;
+  height: 70px;
   z-index: 1;
 }
 .logo-title.white {
@@ -118,9 +119,10 @@ ul {
   align-items: initial;
 }
 .icons-menu {
-  margin: 15px 5px;
+  margin: 15px 40px;
 }
 .icons-menu li {
+  position: relative;
   width: 20px;
   padding: 0 15px;
 }
@@ -140,6 +142,44 @@ li {
   background: none;
   border: none;
   padding: 0;
+}
+.nav-buttons:focus{
+  border: none;
+}
+.connectWalletButton{
+  position: relative!important;
+  outline: none!important;
+  border: none!important;
+  /* width: 20px!important; */
+  background: none!important;
+  bottom: 12px!important;
+  right: 55px!important;
+  /* height: 30px!important */
+}
+.css-1un3lp3:focus {
+  box-shadow: 0 0 0 0px hsla(240, 5%, 25%, 0)!important;
+}
+.connectWalletButton:focus{
+  outline: none!important;
+}
+.connectWalletButton img{
+  height: 30px;
+  width: 30px;
+}
+.nav-button{
+  font-size: larger;
+  font-weight: bold;
+  font-family: "Signika Negative", sans-serif;
+  text-decoration: none;
+  color: #17252a;
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.nav-button img{
+  width: 30px;
+  height: 30px;
 }
 input:focus {
   outline: none;

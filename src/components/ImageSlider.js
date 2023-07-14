@@ -1,34 +1,69 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './stylesheet/ImageSlider.css'
 import leftArrow from './img/leftArrow.png'
 import rightArrow from './img/rightArrow.png'
 
 function ImageSlider(props) {
+    
+    const {nfts,loading,listings}  =props
+    
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isListed, setIsListed] = useState(false)
+    const [price, setPrice] = useState(0)
+    
+    useEffect(() => {
+        if (!listings) return;
+        const listing = listings.find(
+          (listing) => listing.asset.id === nfts[currentImageIndex].metadata.id
+        );
+        if (Boolean(listing)) {
+          setIsListed(true);
+          setPrice(listing.currencyValuePerToken.displayValue);
+        }
+        else{
+            setIsListed(false)
+        }
+        // for (const listing of props.listings) {
+        //   if (listing.asset.id === props.nftItem.id) {
+        //     setIsListed(true);
+        //     setPrice(listing.currencyValuePerToken.displayValue);
+        //     break;
+        //   }
+        // }
+      }, [currentImageIndex,listings,nfts]);
 
 
-    let [currentImageIndex, setCurrentImageIndex] = useState(0);
+
 
     const prevButton = () => {
-        setCurrentImageIndex(currentImageIndex - 1);
-        if (currentImageIndex < 0) {
-            setCurrentImageIndex(props.images.length - 1);
+        if (currentImageIndex <= 1&&loading===false) {
+            setCurrentImageIndex(nfts.length - 1);
+        }
+        else{
+            setCurrentImageIndex(currentImageIndex - 1);
+        }
+    }
+    
+    const nextButton = () => {
+        if (currentImageIndex >= nfts.length-1&&loading===false) {
+            setCurrentImageIndex(0);
+        }
+        else{
+            setCurrentImageIndex(currentImageIndex+1);
         }
     }
 
-    const nextButton = () => {
-        setCurrentImageIndex(currentImageIndex + 1);
-        if (currentImageIndex >= props.images.length) {
-            setCurrentImageIndex(0);
-        }
-    }
+
 
     setTimeout(() => {
-        setCurrentImageIndex(currentImageIndex + 1)
-        if (currentImageIndex >= props.images.length) {
+        if (currentImageIndex >= nfts.length-1&&loading===false) {
             setCurrentImageIndex(0);
         }
-    }, 10000);
+        else{
+            setCurrentImageIndex(currentImageIndex + 1)
+        }
+    }, 100000);
 
 
     const [isSelected1, setIsSelected1] = useState(true);
@@ -102,7 +137,7 @@ function ImageSlider(props) {
         <>
             <div className='dashboard-menu' >
                 <button className='allBtn' onClick={allBtn}
-                    style={{ background: !isSelected1 ? 'none' : '#4197af' }} ><Link className='Link' to='/' >All</Link></button>
+                    style={{ background: !isSelected1 ? 'none' : '#4197af' }} ><Link className='Link' to='/' >All </Link></button>
                 <button className='artBtn' onClick={artBtn}
                     style={{ background: !isSelected2 ? 'none' : '#4197af' }} ><Link className='Link' to='/art' >Art</Link></button>
                 <button className='gamingBtn' onClick={gamingBtn}
@@ -114,16 +149,14 @@ function ImageSlider(props) {
                 <button className='photographyBtn' onClick={photographyBtn}
                     style={{ background: !isSelected6 ? 'none' : '#4197af' }} ><Link className='Link' to='/photography' >Photography</Link></button>
             </div>
-            <Link className='imgSliderLink' to='/art/collection' onClick={imgSlider} >
+            {!loading&&<Link className='imgSliderLink' to={`/art/collection/${currentImageIndex}`} onClick={imgSlider} >
                 <div id='image-slider' >
-                    <img className='collectionImg' src={props.collectionImg} alt="" />
-                    <h1 className='collectionTitle' >{props.title}</h1>
-                    <p className='collectionAuthor' >{props.author}</p>
-                    <p className='collectionInfo' >{props.info} · {props.price} </p>
-                    <img id="image-container" src={props.images[currentImageIndex]} alt="NFT" />
-                    <button className='collectionBtn' > View Collection</button>
+                    <h1 className='nftTitle' >{nfts[currentImageIndex].metadata.name}</h1>
+                    <p className='nftPrice' > {isListed?price+' ETH':''}   </p>
+                    <img id="image-container" src={nfts[currentImageIndex].metadata.image} alt="NFT" />
+                    <button className='nftBtn' > View NFT</button>
                 </div>
-            </Link>
+            </Link>}
             <button id="prev" onClick={prevButton} > <img src={leftArrow} alt="" /></button>
             <button id="next" onClick={nextButton} > <img src={rightArrow} alt="" /></button>
 

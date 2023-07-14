@@ -2,17 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { WalletProvider } from './context/WalletContext';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <WalletProvider>
       <React.StrictMode>
         <App />
       </React.StrictMode>
-    </WalletProvider>
 
 );
 
