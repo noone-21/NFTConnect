@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import './stylesheet/CreateNft.css'
 import empty from './img/empty1.png'
@@ -31,9 +32,9 @@ function CreateNft() {
         <p className='DescInfo' > The description will be included on the item's detail page underneath its image. <a href="https://www.markdownguide.org/cheat-sheet/"> Markdown syntax</a> <br /> is supported.
         </p>
         <input className='createNftInputDesc' type="text" />
-        <a className='createNftRoute' href="/mynfts">
+        <Link className='createNftRoute' to="/mynfts">
           <button className="createNftButton">Create NFT</button>
-        </a>
+        </Link>
       </div>
     </>
   )

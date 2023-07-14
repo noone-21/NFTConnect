@@ -1,0 +1,18 @@
+
+/* style.css */
+#bg-gradient{
+    height: 100px;
+    background-color: #77bbb7; /* For browsers that do not support gradients */
+    background-image: linear-gradient(180deg,#77bbb7, #0c2422);
+}
+
+/* Index.css */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0c2422;
+  }

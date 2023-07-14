@@ -1,4 +1,9 @@
 import '../stylesheet/Menu.css'
+import twitter from '../img/twitter.png'
+import instagram from '../img/instagram.png'
+import facebook from '../img/facebook.png'
+import github from '../img/github.png'
+import gmail from '../img/gmail.png'
 
 export default function ResourcesMenu() {
     return (
@@ -15,19 +20,19 @@ export default function ResourcesMenu() {
                 <button>Newsletter</button>
                 <div className="fav-icons">
                     <a href="/">
-                        <i className="fa-brands fa-square-twitter"></i>
+                        <img src={twitter} alt="" />
                     </a>
                     <a href="/">
-                        <i className="fa-brands fa-square-instagram"></i>
+                    <img src={instagram} alt="" />
                     </a>
                     <a href="/">
-                        <i className="fa-brands fa-square-github"></i>
+                    <img src={github} alt="" />
                     </a>
                     <a href="/">
-                        <i className="fa-brands fa-facebook"></i>
+                    <img src={facebook} alt="" />
                     </a>
                     <a href="/">
-                        <i className="fa-solid fa-envelope"></i>
+                    <img src={gmail} alt="" />
                     </a>
                 </div>
             </div>

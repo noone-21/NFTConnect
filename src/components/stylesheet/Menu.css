@@ -1,5 +1,5 @@
 .dropdown-menu{
-    width: 130px;
+    width: 150px;
     display: flex;
     flex-direction: column;
     padding: 0%;
@@ -20,6 +20,20 @@
 .dropdown-menu button:last-child{
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
+}
+.nightMode{
+    display: flex;
+}
+.nightMode img{
+    position: relative;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+}
+.nightMode p{
+    position: relative;
+    left: 5px;
+
 }
 
 
@@ -49,6 +63,10 @@
     padding-bottom: 18px;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
+}
+.fav-icons img{
+    width: 20px;
+    height: 20px;
 }
 .dropdown-menu a{
     color: black;

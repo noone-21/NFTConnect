@@ -100,7 +100,7 @@
   left: 90px;
   bottom: 130px;
 }
-.nftTitle {
+#nftTitle {
   position: absolute;
   font-size: 25px;
   border-radius: 10px;
@@ -119,7 +119,7 @@
   left: 90px;
   bottom: 40px;
 } */
-.nftPrice {
+#nftPrice {
   position: absolute;
   font-size: 1.1rem;
   font-weight: bolder;
@@ -129,7 +129,7 @@
   left: 90px;
   bottom: 10px;
 }
-.nftBtn {
+#nftBtn {
   position: absolute;
   margin: auto;
   background-color: gray;

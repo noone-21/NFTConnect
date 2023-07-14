@@ -1,19 +1,19 @@
 import '../stylesheet/Menu.css'
 import { Link } from 'react-router-dom'
-// import  from '../'
+import night from '../img/night.png'
 
 export default function ProfileMenu() {
     return (
         <>
             <div className="dropdown-menu">
-                <button><Link to='/'>Profile</Link></button>
-                <button><Link to='/'>Favorites</Link></button>
-                <button><Link to='/'>Watchlist</Link></button>
+                <button>Profile</button>
+                <button>Favorites</button>
+                <button>Watchlist</button>
                 <button><Link to='/mynfts' >My NFTs</Link></button>
                 <button><Link to='/createnft'>  Create</Link></button>
-                <button><Link to='/'>Settings</Link></button>
-                <button><Link to='/'>Language</Link></button>
-                <button><Link to='/'>Night Mode</Link></button>
+                <button>Settings</button>
+                <button>Language</button>
+                <button className='nightMode' > <img  src={night} alt="" /> <p  >Night Mode</p> </button>
             </div>
         </>
     )

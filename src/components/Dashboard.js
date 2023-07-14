@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-// import { Link } from 'react-router-dom'
 import CollectionsInfo from './CollectionsInfo'
 import Footer from './Footer'
 import ImageSlider from './ImageSlider'

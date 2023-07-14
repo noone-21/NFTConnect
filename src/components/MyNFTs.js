@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef} from 'react';
 import './stylesheet/MyNFTs.css';
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
 import info from './img/info.png'
 import dots from './img/dots.png'
@@ -62,9 +63,9 @@ function MyNFTs() {
             <br /> NFTConnect. <a href="/">Learn more about creating NFTs for <br /> free on NFTConnect</a>
           </p>
         </div>
-        <a href="/createnft">
+        <Link to="/createnft">
           <button className="createNftBtn">Create NFT</button>
-        </a>
+        </Link>
         <button className="otherPlatformBtn" ref={dropdownRef} onClick={toggleDropdown}>
           <img src={dots} alt="" />
         </button>

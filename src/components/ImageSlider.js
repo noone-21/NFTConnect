@@ -151,10 +151,10 @@ function ImageSlider(props) {
             </div>
             {!loading&&<Link className='imgSliderLink' to={`/art/collection/${currentImageIndex}`} onClick={imgSlider} >
                 <div id='image-slider' >
-                    <h1 className='nftTitle' >{nfts[currentImageIndex].metadata.name}</h1>
-                    <p className='nftPrice' > {isListed?price+' ETH':''}   </p>
+                    <h1 id='nftTitle' >{nfts[currentImageIndex].metadata.name}</h1>
+                    <p id='nftPrice' > {isListed?price+' ETH':''}   </p>
                     <img id="image-container" src={nfts[currentImageIndex].metadata.image} alt="NFT" />
-                    <button className='nftBtn' > View NFT</button>
+                    <button id='nftBtn' > View NFT</button>
                 </div>
             </Link>}
             <button id="prev" onClick={prevButton} > <img src={leftArrow} alt="" /></button>
