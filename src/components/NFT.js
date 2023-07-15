@@ -10,6 +10,7 @@ import art from './img/art.png'
 import music from './img/music.png'
 import buy from './img/buy.png'
 import ethereum from './img/ethereum.png'
+import NFTConnects from './img/NFTConnects.jpeg'
 import './stylesheet/NFT.css'
 import {
     useContract,
@@ -49,7 +50,6 @@ function NFT() {
     const [price, setPrice] = useState(0)
 
     useEffect(() => {
-        console.log("enter")
         if (!listings) return;
         const listing = listings.find(
             (listing) => listing.asset.id === nfts[id].metadata.id
@@ -68,7 +68,6 @@ function NFT() {
         //     break;
         //   }
         // }
-        console.log("exit")
     }, [id,listings,nfts]);
     
     const [category, setCategory] = useState('Gaming')
@@ -118,11 +117,10 @@ function NFT() {
             <div id='bg-gradient' >
                 <Navbar />
             </div>
-            {loadingNft ? <div className='nftLoading' ></div> : <div className='nftPage' >
-                {/* <div className='nftHeader' > */}
+            {loadingNft ? <div className='nftLoading' ><img src={NFTConnects} alt="" /></div> :
+             <div className='nftPage' >
                 <img id='nftChain' src={ethereum} alt="" />
                 <img className='nftImage' src={nfts[id].metadata.image} alt="" />
-                {/* </div> */}
                 <div className='nftBody' >
                     <h1 id='nftName' >{nfts[id].metadata.name}</h1>
                     <h1 className='nftDescription' >{nfts[id].metadata.description}</h1>
@@ -132,15 +130,14 @@ function NFT() {
                         <p> <img src={categoryImg} alt="" /> {category} </p>
                     </div>
                     <p className='nftPriceLabel' > Price: </p>
-                    {loadingList && price===0 ? <div className='priceLoading' ></div> :
+                    {loadingList && price===0 ? <div className='priceLoading' ><img src={NFTConnects} alt="" /></div> :
                     <div className='nftPriceAmount' >
-                        <p className='nftPrice' > {price} ETH</p>
+                        <p className='nft-Price' > {price} ETH</p>
                         <p className='nftPriceRs' >Rs. {(price*509147.12).toFixed(2)} </p>
                     </div>}
                     <button disabled={!isListed} id="buyNft"><img src={buy} alt="" /> <p>BUY NOW</p> </button>
                 </div>
             </div>}
-
         </>
     )
 }

@@ -73,17 +73,33 @@
 
 .nftLoading {
   position: relative;
+  display: inline-block;
   top: 200px;
-  left: 500px;
-  border: 16px solid #f0f0f0;
+  right: 40px;
+  margin-left: 50%;
+  width: fit-content; /* Adjust the width to fit the image */
+}
+
+.nftLoading::after {
+  content: "";
+  position: absolute;
+  top: -6%;
+  left: -7%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  border-top: 16px solid #22c9bb;;
+  width: calc(100% + 20px); /* Increase the width to include the desired border size */
+  height: calc(100% + 20px); /* Increase the height to include the desired border size */
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0d5366, 0 0 70px #0d5366, 0 0 80px #0d5366, 0 0 100px #0d5366;
+  animation: glowing-border 2s ease-in-out infinite;
+}
+
+.nftLoading img {
+  display: block;
+  border-radius: 50%;
   width: 150px;
   height: 150px;
-  margin: 0 100px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
 }
+
 
 .nftPriceLabel{
   position: relative;
@@ -96,30 +112,46 @@
   display: flex;
   height: 80px;
 }
-.nftPrice{
+.nft-Price{
   position: relative;
   font-size: 1.8rem;
   bottom: 30px;
-  left: -10px;
+  left: 0px;
   font-weight: bold;
 }
 .nftPriceRs{
   position: relative;
-  left: -10px;
-  top: 5px;
+  left: 5px;
+  top: -2px;
 }
+
 .priceLoading {
   position: relative;
+  display: inline-block;
   top: 20px;
-  left: 50px;
-  border: 16px solid #f0f0f0;
+  left: -100px;
+  margin-left: 50%;
+  width: fit-content; /* Adjust the width to fit the image */
+}
+
+.priceLoading::after {
+  content: "";
+  position: absolute;
+  top: -14%;
+  left: -14%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
-  border-top: 16px solid #22c9bb;;
+  width: calc(100% + 20px); /* Increase the width to include the desired border size */
+  height: calc(100% + 20px); /* Increase the height to include the desired border size */
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0d5366, 0 0 70px #0d5366, 0 0 80px #0d5366, 0 0 100px #0d5366;
+  animation: glowing-border 2s ease-in-out infinite;
+}
+
+.priceLoading img {
+  display: block;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin: 0 100px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
 }
 
 #buyNft{
@@ -151,30 +183,26 @@
 #buyNft:disabled,
 #buyNft[disabled] {
   background-color: rgba(58, 175, 169, 0.4);
-  
   cursor: auto;
 }
 
 
 
-/* Safari */
-@-webkit-keyframes spin {
+@keyframes glowing-border {
   0% {
-    -webkit-transform: rotate(0deg);
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(360deg);
+    transform: scale(0.9);
+    opacity: 0.8;
   }
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 
 

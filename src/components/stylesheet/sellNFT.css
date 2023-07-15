@@ -1,0 +1,246 @@
+.sellNFTPage {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.sellNFTPage input{
+    border: 1px solid black;
+}
+
+.sellNFTDetails {
+  position: relative;
+  left: 100px;
+}
+.sellNFTDetails p {
+  font-weight: bold;
+}
+.sellNftsInfoBtn {
+  background: none;
+  position: relative;
+  margin-left: 460px;
+  bottom: 32px;
+  border: none;
+}
+.sellNftsInfoBtn img {
+  position: relative;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+}
+.infoDialogue {
+  position: relative;
+  left: 460px;
+  z-index: 1;
+  bottom: 130px;
+  transform: translateX(-50%);
+  width: 300px;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #17252a;
+  color: #ffffff;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.sellNftsInfoBtn:hover + .infoDialogue,
+.infoDialogue:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.sellNftTypeSelector {
+  position: relative;
+  height: 100px;
+  top: -90px;
+  display: flex;
+  border-radius: 10px;
+}
+.sellNftTypeSelector img {
+  height: 30px;
+  width: 30px;
+}
+.sellNftTypeSelector p {
+  color: #3aafa9;
+  font-size: 1rem;
+  /* font-weight: bold; */
+}
+.fixedPriceSelect {
+  border-radius: 10px 0 0 10px;
+  padding: 10px 70px;
+}
+.fixedPriceSelect.active{
+    background-color: rgb(155, 154, 154,0.5);
+}
+.timedAuctionSelect {
+  border-radius: 0 10px 10px 0;
+  padding: 10px 70px;
+}
+.timedAuctionSelect.active{
+    background-color: rgb(155, 154, 154,0.5);
+}
+.sellNFTPriceLabel {
+  position: relative;
+  top: -50px;
+}
+.sellNFTPriceInput {
+  position: relative;
+  display: flex;
+  top: -30px;
+}
+.sellNFTPriceInput input {
+  position: relative;
+  border-radius: 5px;
+  top: -15px;
+  height: 30px;
+  left: 20px;
+  width: 380px;
+}
+.ethLogo {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  top: -17px;
+}
+.ethLogo p {
+  margin: 0;
+}
+.ethLogo img {
+  position: relative;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+}
+.sellNFTPriceRs {
+  position: relative;
+  font-weight: lighter;
+  top: -40px;
+  left: 95px;
+  font-size: 0.8rem;
+}
+.sellNFTDurationLabel {
+    position: relative;
+    top: -50px;
+  }
+  .sellNFTDurationInput {
+    position: relative;
+    display: flex;
+    top: -30px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    top: -40px;
+    height: 30px;
+    /* left: 20px; */
+    width: 470px;
+  }
+  .sellNFTDurationInput input {
+    position: relative;
+    left: 5px;
+    width: 440px;
+    border-radius: 5px;
+    border: none;
+  }
+  .sellNFTDurationInput img{
+    position: relative;
+    top: 3px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+#sellNftBtn {
+  position: relative;
+  width: 250px;
+  font-size: 1.3rem;
+  height: 60px;
+  top: 0px;
+  background-color: #3aafa9;
+  color: #ffffff;
+  /* padding: 30px; */
+  /* padding-bottom: 50px; */
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+#sellNftBtn img {
+  position: relative;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+}
+#sellNftBtn p {
+  position: relative;
+  bottom: 6px;
+  left: 5px;
+}
+#sellNftBtn:disabled,
+#sellNftBtn[disabled] {
+  background-color: rgba(58, 175, 169, 0.4);
+  cursor: auto;
+}
+
+
+
+.sellNFTPreview {
+  position: relative;
+  justify-content: flex-end;
+  left: 250px;
+}
+.sellNFTPreview p {
+  font-weight: bold;
+}
+.sellNFTPreviewLabel {
+  position: relative;
+  left: 20px;
+}
+.sellNFTImage {
+  position: relative;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+  top: 10px;
+  width: 400px;
+  margin-left: 20px;
+  border-radius: 10px;
+  height: 300px;
+  position: relative;
+}
+.sellNFTPreviewDetails {
+  position: relative;
+  display: flex;
+  padding: 5px 10px;
+  margin-left: 20px;
+  z-index: -1;
+  top: -5px;
+  width: 377px;
+  border: 1px solid gray;
+  border-radius: 0 0 10px 10px;
+}
+.sellNFTName {
+  position: relative;
+  left: 10px;
+}
+.sellNFTPreviewPrice {
+  position: relative;
+  left: 220px;
+}
+.sellNFTPreviewPriceAmount {
+  position: relative;
+  display: flex;
+  margin: 0;
+}
+.sellNFTPreviewPriceAmount img {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  bottom: 10px;
+}
+.sellNFTPreviewPriceAmount p {
+  position: relative;
+  max-width: 90px;
+  bottom: 10px;
+  margin: 0;
+}

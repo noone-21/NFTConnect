@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
 import info from './img/info.png'
 import dots from './img/dots.png'
+import NFTConnects from './img/NFTConnects.jpeg'
 import NFTItem from './NFTItem';
 import {
   useContract,
@@ -77,9 +78,8 @@ function MyNFTs() {
             <a href="/">Mint on Mintable</a>
           </div>
         )}
-        {myNftLoading ? <div className='myNftLoading' ></div> :
+        {myNftLoading ? <div className='myNftLoading' > <img src={NFTConnects} alt="" /></div> :
         <div id="myNft">
-          {/* {!ownedNFTs.length === 0 && ''} */}
           {ownedNFTs?ownedNFTs.map((nft) => {
             return <NFTItem
               key={nft.metadata.id}

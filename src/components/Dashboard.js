@@ -12,19 +12,16 @@ import bnb from './img/bnb.png'
 import solana from './img/solana-1.png'
 import bitcoin from './img/bitcoin.png'
 import polygon from './img/polygon-1.png'
+import NFTConnects from './img/NFTConnects.jpeg'
 import {
     useContract,
-    useAddress,
     useNFTs,
-    useOwnedNFTs,
     useValidDirectListings,
 } from "@thirdweb-dev/react";
 
-function Dashboard(props) {
+function Dashboard() {
 
-    const [collection, setCollection] = useState({});
-
-    const address = useAddress();
+    // const address = useAddress();
 
     const { contract: nftCollection } = useContract("0xcb36C2dC74aBC6Ce5551cF80777f7B8Fd172a12a");
     const {
@@ -92,26 +89,13 @@ function Dashboard(props) {
 
     };
 
-    const [isLoading, setIsLoading] = useState(false);
-
-    // Function to simulate loading process
-    const simulateLoading = () => {
-        // Simulate loading delay
-        if(loadingNft)
-        {
-            setIsLoading(true)
-        }
-        else{
-            setIsLoading(false)
-        }
-    };
 
     return (
         <>
             <div id='bg-gradient' >
                 <Navbar />
             </div>
-            {loadingNft ? <div className='nftLoading' ></div> :
+            {loadingNft ? <div className='nftLoading' > <img src={NFTConnects} alt="" /> </div> :
                 <div>
                     <ImageSlider nfts={nfts} loading={loadingNft} listings={listings} />
                     <div className='nft-chart' >

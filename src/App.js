@@ -36,7 +36,7 @@ function App() {
           <Routes>
             <Route exact path='/createnft' element={<CreateNft />} ></Route>
             <Route exact path='/mynfts' element={<MyNFTs />} ></Route>
-            <Route exact path='/sellNFT' element={<SellNFT />} ></Route>
+            <Route exact path='/sellNFT/:id' element={<SellNFT />} ></Route>
           </Routes>
         </Router>
     </ThirdwebProvider>
