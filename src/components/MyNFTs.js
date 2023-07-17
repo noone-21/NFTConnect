@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './stylesheet/MyNFTs.css';
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
@@ -24,6 +24,7 @@ function MyNFTs() {
     error: myNftError,
   } = useOwnedNFTs(nftCollection, address);
 
+  const [filteredNFTs, setFilteredNFTs] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -44,9 +45,21 @@ function MyNFTs() {
     };
   }, []);
 
+  useEffect(() => {
+    if(!ownedNFTs){
+      return
+    }
+    setFilteredNFTs (ownedNFTs.filter((Nft) => {
+      // Condition to skip certain numbers
+      return Nft.metadata.image !== null;
+    }))
+  }, [ownedNFTs])
+  
+ 
+
   return (
     <>
-     <div id='bg-gradient' >
+      <div id='bg-gradient' >
         <Navbar />
       </div>
       <div className="myNftsPage">
@@ -79,18 +92,19 @@ function MyNFTs() {
           </div>
         )}
         {myNftLoading ? <div className='myNftLoading' > <img src={NFTConnects} alt="" /></div> :
-        <div id="myNft">
-          {ownedNFTs?ownedNFTs.map((nft) => {
-            return <NFTItem
-              key={nft.metadata.id}
-              loading={myNftLoading}
-              nftId={nft.metadata.id}
-              nftImg={nft.metadata.image}
-              nftName={nft.metadata.name}
-              nftDescription={nft.metadata.description}
-            />
-          }):''}
-        </div>}
+          <div id="myNft">
+            {ownedNFTs ? filteredNFTs.map((nft,index) => {
+              return <NFTItem
+                key={nft.metadata.id}
+                loading={myNftLoading}
+                index={index}
+                nftId={nft.metadata.id}
+                nftImg={nft.metadata.image}
+                nftName={nft.metadata.name}
+                nftDescription={nft.metadata.description}
+              />
+            }) : ''}
+          </div>}
       </div>
     </>
   );

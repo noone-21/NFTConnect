@@ -129,7 +129,7 @@
   left: 90px;
   bottom: 10px;
 }
-#nftBtn {
+#nft-Btn {
   position: absolute;
   margin: auto;
   background-color: gray;
@@ -144,7 +144,7 @@
   bottom: 30px;
   right: 60px;
 }
-#image-slider:hover .nftBtn {
+#image-slider:hover .nft-Btn {
   background-color: #def2f1;
   color: black;
   border-color: #def2f1;

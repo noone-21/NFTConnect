@@ -78,5 +78,10 @@
   bottom: 6px;
   left: 5px;
 }
+#sellNft:disabled,
+#sellNft[disabled] {
+  background-color: rgba(58, 175, 169, 0.4);
+  cursor: auto;
+}
 
 

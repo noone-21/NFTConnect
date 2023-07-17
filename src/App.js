@@ -21,24 +21,24 @@ function App() {
       activeChain={Sepolia}
       supportedWallets={[metamaskWallet()]}
     >
-        <Router>
-          <Routes>
-            <Route exact path="/" element={isHide ? <LoadingScreen /> : <Dashboard />} ></Route>
-            <Route exact path="/art" element={<Dashboard />} ></Route>
-            <Route exact path="/gaming" element={<Dashboard  />} ></Route>
-            <Route exact path="/memberships" element={<Dashboard />} ></Route>
-            <Route exact path="/pfps" element={<Dashboard />} ></Route>
-            <Route exact path="/photography" element={<Dashboard  />} ></Route>
-          </Routes>
-          <Routes>
-            <Route exact path='/art/collection/:id' element={<NFT/>} />
-          </Routes>
-          <Routes>
-            <Route exact path='/createnft' element={<CreateNft />} ></Route>
-            <Route exact path='/mynfts' element={<MyNFTs />} ></Route>
-            <Route exact path='/sellNFT/:id' element={<SellNFT />} ></Route>
-          </Routes>
-        </Router>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={isHide ? <LoadingScreen /> : <Dashboard />} ></Route>
+          <Route exact path="/art" element={<Dashboard />} ></Route>
+          <Route exact path="/gaming" element={<Dashboard />} ></Route>
+          <Route exact path="/memberships" element={<Dashboard />} ></Route>
+          <Route exact path="/pfps" element={<Dashboard />} ></Route>
+          <Route exact path="/photography" element={<Dashboard />} ></Route>
+        </Routes>
+        <Routes>
+          <Route exact path='/art/collection/:id' element={<NFT />} />
+        </Routes>
+        <Routes>
+          <Route exact path='/createnft' element={<CreateNft />} ></Route>
+          <Route exact path='/mynfts' element={<MyNFTs />} ></Route>
+          <Route exact path='/sellNFT/:id' element={<SellNFT />} ></Route>
+        </Routes>
+      </Router>
     </ThirdwebProvider>
   );
 }

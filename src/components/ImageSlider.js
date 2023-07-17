@@ -5,23 +5,25 @@ import leftArrow from './img/leftArrow.png'
 import rightArrow from './img/rightArrow.png'
 
 function ImageSlider(props) {
-    
-    const {nfts,loading,listings}  =props
-    
+
+    const { nfts, loading, listings } = props
+
+    const [filteredNFTs, setFilteredNFTs] = useState([]);
+    const [isfilteredNFTs, setIsFilteredNFTs] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isListed, setIsListed] = useState(false)
     const [price, setPrice] = useState(0)
-    
+
     useEffect(() => {
         if (!listings) return;
         const listing = listings.find(
-          (listing) => listing.asset.id === nfts[currentImageIndex].metadata.id
+            (listing) => listing.asset.id === nfts[currentImageIndex].metadata.id
         );
         if (Boolean(listing)) {
-          setIsListed(true);
-          setPrice(listing.currencyValuePerToken.displayValue);
+            setIsListed(true);
+            setPrice(listing.currencyValuePerToken.displayValue);
         }
-        else{
+        else {
             setIsListed(false)
         }
         // for (const listing of props.listings) {
@@ -31,36 +33,37 @@ function ImageSlider(props) {
         //     break;
         //   }
         // }
-      }, [currentImageIndex,listings,nfts]);
+    }, [currentImageIndex, listings, nfts]);
 
 
 
 
     const prevButton = () => {
-        if (currentImageIndex <= 1&&loading===false) {
-            setCurrentImageIndex(nfts.length - 1);
+        if (currentImageIndex <= 1 && isfilteredNFTs) {
+            setCurrentImageIndex(filteredNFTs.length - 1);
         }
-        else{
+        else {
             setCurrentImageIndex(currentImageIndex - 1);
+
         }
     }
-    
+
     const nextButton = () => {
-        if (currentImageIndex >= nfts.length-1&&loading===false) {
+        if (currentImageIndex >= filteredNFTs.length - 1 && isfilteredNFTs) {
             setCurrentImageIndex(0);
         }
-        else{
-            setCurrentImageIndex(currentImageIndex+1);
+        else {
+            setCurrentImageIndex(currentImageIndex + 1);
         }
     }
 
 
 
     setTimeout(() => {
-        if (currentImageIndex >= nfts.length-1&&loading===false) {
+        if (currentImageIndex >= filteredNFTs.length - 1 && isfilteredNFTs) {
             setCurrentImageIndex(0);
         }
-        else{
+        else {
             setCurrentImageIndex(currentImageIndex + 1)
         }
     }, 100000);
@@ -130,7 +133,19 @@ function ImageSlider(props) {
         setIsSelected5(false);
         setIsSelected6(false);
     };
+    useEffect(() => {
+        if (!nfts) {
+            return
+        }
 
+        setFilteredNFTs(nfts.filter((Nft) => {
+            // Condition to skip certain numbers
+            return Nft.metadata.image !== null&&Nft.owner!=='0x0000000000000000000000000000000000000000';
+        }))
+        if(Boolean(filteredNFTs)){
+            setIsFilteredNFTs(true)
+        }
+    }, [nfts,filteredNFTs])
 
 
     return (
@@ -149,12 +164,12 @@ function ImageSlider(props) {
                 <button className='photographyBtn' onClick={photographyBtn}
                     style={{ background: !isSelected6 ? 'none' : '#4197af' }} ><Link className='Link' to='/photography' >Photography</Link></button>
             </div>
-            {!loading&&<Link className='imgSliderLink' to={`/art/collection/${currentImageIndex}`} onClick={imgSlider} >
+            {isfilteredNFTs && <Link className='imgSliderLink' to={`/art/collection/${currentImageIndex}`} onClick={imgSlider} >
                 <div id='image-slider' >
-                    <h1 id='nftTitle' >{nfts[currentImageIndex].metadata.name}</h1>
-                    <p id='nftPrice' > {isListed?price+' ETH':''}   </p>
-                    <img id="image-container" src={nfts[currentImageIndex].metadata.image} alt="NFT" />
-                    <button id='nftBtn' > View NFT</button>
+                    <h1 id='nftTitle' >{filteredNFTs[currentImageIndex].metadata.name}</h1>
+                    <p id='nftPrice' > {isListed ? price + ' ETH' : ''}   </p>
+                    <img id="image-container" src={filteredNFTs[currentImageIndex].metadata.image} alt="NFT" />
+                    <button id='nft-Btn' > View NFT</button>
                 </div>
             </Link>}
             <button id="prev" onClick={prevButton} > <img src={leftArrow} alt="" /></button>

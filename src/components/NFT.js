@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { utils } from "ethers";
 import Navbar from './Navbar'
 import eye from './img/eye.png'
 import heart from './img/heart.png'
@@ -14,16 +15,20 @@ import NFTConnects from './img/NFTConnects.jpeg'
 import './stylesheet/NFT.css'
 import {
     useContract,
-    // useAddress,
+    useContractWrite,
+    useAddress,
     useNFTs,
     useValidDirectListings,
 } from "@thirdweb-dev/react";
 
 function NFT() {
 
+    const [filteredNFTs, setFilteredNFTs] = useState([]);
+    const [isfilteredNFTs, setIsFilteredNFTs] = useState(false);
+
     const { id } = useParams();
 
-    // const address = useAddress();
+    const address = useAddress();
 
     const { contract: nftCollection } = useContract("0xcb36C2dC74aBC6Ce5551cF80777f7B8Fd172a12a");
     const {
@@ -34,7 +39,6 @@ function NFT() {
         start: 0,
         count: 100,
     });
-
 
     const { contract: marketplace } = useContract(
         "0x875f2aB61e1F9638FFea7f5b0436Ecf6caEAa77B"
@@ -47,6 +51,7 @@ function NFT() {
     } = useValidDirectListings(marketplace, { start: 0, count: 100 });
 
     const [isListed, setIsListed] = useState(false)
+    const [isOwner, setIsOwner] = useState(false)
     const [price, setPrice] = useState(0)
 
     useEffect(() => {
@@ -68,7 +73,40 @@ function NFT() {
         //     break;
         //   }
         // }
-    }, [id,listings,nfts]);
+        if (nfts[id].owner!==address) {
+            setIsOwner(false)
+        }else{
+            setIsOwner(true)
+        }
+    }, [id,listings,nfts,address]);
+
+      const { mutateAsync: buyFromListing, isLoading } = useContractWrite(
+        marketplace,
+        "buyFromListing"
+      );
+    
+      const handleBuyOutFunction = async () => {
+        try {
+          const data = await buyFromListing({
+            args: [
+              id,
+              address,
+              1,
+              listings[id].currencyContractAddress,
+              listings[id].pricePerToken,
+            ],
+            overrides: {
+                gasLimit: 1000000, // override default gas limit
+                value: listings[id].pricePerToken, // send 0.1 native token with the contract call
+              },
+          });
+          console.info("contract call successs", data);
+        } catch (err) {
+          console.error("contract call failure", err);
+        }
+      };
+
+
     
     const [category, setCategory] = useState('Gaming')
     const [categoryImg, setCategoryImg] = useState(gaming)
@@ -107,9 +145,20 @@ function NFT() {
             setfavorite(heart)
         }
     }
-    console.log(loadingList)
-    console.log(price)
 
+    useEffect(() => {
+        if (!nfts) {
+            return
+        }
+
+        setFilteredNFTs(nfts.filter((Nft) => {
+            // Condition to skip certain numbers
+            return Nft.metadata.image !== null&&Nft.owner!=='0x0000000000000000000000000000000000000000';
+        }))
+        if(Boolean(filteredNFTs)){
+            setIsFilteredNFTs(true)
+        }
+    }, [nfts,filteredNFTs])
 
 
     return (
@@ -117,13 +166,13 @@ function NFT() {
             <div id='bg-gradient' >
                 <Navbar />
             </div>
-            {loadingNft ? <div className='nftLoading' ><img src={NFTConnects} alt="" /></div> :
+            {loadingNft||!isfilteredNFTs ? <div className='nftLoading' ><img src={NFTConnects} alt="" /></div> :
              <div className='nftPage' >
                 <img id='nftChain' src={ethereum} alt="" />
-                <img className='nftImage' src={nfts[id].metadata.image} alt="" />
+                <img className='nftImage' src={filteredNFTs[id].metadata.image} alt="" />
                 <div className='nftBody' >
-                    <h1 id='nftName' >{nfts[id].metadata.name}</h1>
-                    <h1 className='nftDescription' >{nfts[id].metadata.description}</h1>
+                    <h1 id='nftName' >{filteredNFTs[id].metadata.name}</h1>
+                    <h1 className='nftDescription' >{filteredNFTs[id].metadata.description}</h1>
                     <div className='nftProperties' >
                         <p> <img src={eye} alt="" /> 119 views </p>
                         <p> <img onClick={addFavorite} className='favorite' src={favorite} alt="" /> 3 favorites </p>
@@ -135,7 +184,7 @@ function NFT() {
                         <p className='nft-Price' > {price} ETH</p>
                         <p className='nftPriceRs' >Rs. {(price*509147.12).toFixed(2)} </p>
                     </div>}
-                    <button disabled={!isListed} id="buyNft"><img src={buy} alt="" /> <p>BUY NOW</p> </button>
+                    <button onClick={handleBuyOutFunction} disabled={!isListed||isOwner} id="buyNft"><img src={buy} alt="" /> <p>BUY NOW</p> </button>
                 </div>
             </div>}
         </>

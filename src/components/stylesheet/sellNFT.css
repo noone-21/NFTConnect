@@ -210,7 +210,7 @@
 }
 .sellNFTPreviewDetails {
   position: relative;
-  display: flex;
+  /* display: flex; */
   padding: 5px 10px;
   margin-left: 20px;
   z-index: -1;
@@ -225,7 +225,7 @@
 }
 .sellNFTPreviewPrice {
   position: relative;
-  left: 220px;
+  left: 20px;
 }
 .sellNFTPreviewPriceAmount {
   position: relative;

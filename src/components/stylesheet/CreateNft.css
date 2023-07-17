@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
-
-.createNftPage{
-    position: absolute;
-    padding-bottom: 50px;
+.createNftPage {
+  position: absolute;
+  padding-bottom: 50px;
 }
-.createNftPage hr{
+.createNftPage hr {
   width: 450px;
   margin-left: 250px;
 }
-.createNFTNavigation{
+.createNFTNavigation {
   position: relative;
   /* margin-top: 100px; */
   margin-left: 50px;
@@ -17,121 +16,122 @@
   position: relative;
   color: gray;
 }
-.createNFTNavigation a{
+.createNFTNavigation a {
   text-decoration: none;
   color: gray;
 }
-.createNFTNavigation img{
+.createNFTNavigation img {
   margin-left: 5px;
   margin-top: 4px;
   width: 20px;
   height: 20px;
 }
-.createNFTNavigation p{
+.createNFTNavigation p {
   position: relative;
   bottom: 15px;
   margin-left: 5px;
 }
 
-.createNftHeading{
+.createNftHeading {
   position: relative;
   /* top: 10px; */
   margin-top: 10px;
   margin-left: 250px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: relative;
 }
 
-.required{
-    position: relative;
-    top: -40px;
-    font-weight: lighter;
-    color: gray;
-    margin-left: 260px;
+.required {
+  position: relative;
+  top: -40px;
+  font-weight: lighter;
+  color: gray;
+  margin-left: 260px;
 }
-.sterric{
-    position: relative;
-    top: 0px;
-    margin-left: 250px;
-    color: crimson;
+.sterric {
+  position: relative;
+  top: 0px;
+  margin-left: 250px;
+  color: crimson;
 }
 
-.createNftImgTitle{
-    position: relative;
-    margin-left: 250px;
-    font-size: 15px;
-    /* top: -10px; */
-    bottom: 30px;
+.createNftImgTitle {
+  position: relative;
+  margin-left: 250px;
+  font-size: 15px;
+  /* top: -10px; */
+  bottom: 30px;
 }
-.sterricI{
+.sterricI {
   position: relative;
   margin-left: 250px;
   bottom: 30px;
   color: crimson;
 }
-.imgDesc{
-    position: relative;
-    bottom: 60px;
-    font-weight: lighter;
-    font-size: 12px;
-    color: gray;
-    margin-left: 250px;
+.imgDesc {
+  position: relative;
+  bottom: 60px;
+  font-weight: lighter;
+  font-size: 12px;
+  color: gray;
+  margin-left: 250px;
 }
 
 .createNftImg {
-    position: relative;
-    width: 400px;
-    height: 250px;
-    margin-left: 250px;
-    border: 2px dotted #000;
-    border-radius: 10px;
-    bottom: 50px;
-  }
-
-  .createNftImg:hover{
-    background-color: gray;
-  }
-
-  .imgLogo{
-    width: 150px;
-    margin: 60px 0 0 120px;
-  }
-
-  .sterricN{
-    position: relative;
-    margin-left: 50px;
-    bottom: 30px;
-    color: crimson;
+  position: relative;
+  width: 400px;
+  height: 250px;
+  margin-left: 250px;
+  border: 2px dotted #000;
+  border-radius: 10px;
+  bottom: 50px;
 }
 
-.createNftImgName{
-    position: relative;
-    margin-left: 250px;
-    font-size: 15px;
-    bottom: 30px;
-}
-.createNftInputName{
-    position: relative;
-    margin-left: 250px;
-    border-radius: 5px;
-    bottom: 60px;
-    font-size: 17px;
-    color: black;
-    height: 35px;
-    width: 450px;
-    opacity: 0.4;
-    border-color: gray;
-    border-width: 1px;
+.createNftImg:hover {
+  background-color: gray;
 }
 
-.createNftDesc{
+.imgLogo {
+  width: 150px;
+  height: 150px;
+  margin: 50px 0 0 120px;
+}
+
+.sterricN {
+  position: relative;
+  margin-left: 50px;
+  bottom: 30px;
+  color: crimson;
+}
+
+.createNftImgName {
+  position: relative;
+  margin-left: 250px;
+  font-size: 15px;
+  bottom: 30px;
+}
+.createNftInputName {
+  position: relative;
+  margin-left: 250px;
+  border-radius: 5px;
+  bottom: 60px;
+  font-size: 17px;
+  color: black;
+  height: 35px;
+  width: 450px;
+  opacity: 0.4;
+  border-color: gray;
+  border-width: 1px;
+}
+
+.createNftDesc {
   position: relative;
   margin-left: 250px;
   font-size: 15px;
   bottom: 50px;
 }
 
-.DescInfo{
+.DescInfo {
   position: relative;
   bottom: 50px;
   font-weight: lighter;
@@ -139,34 +139,59 @@
   color: gray;
   margin-left: 250px;
 }
-.createNftInputDesc{
-    position: relative;
-    margin-left: 250px;
-    border-radius: 5px;
-    bottom: 40px;
-    font-size: 17px;
-    color: black;
-    height: 100px;
-    width: 450px;
-    opacity: 0.4;
-    border-color: gray;
-    border-width: 1px;
-}
-
-.createNftRoute{
+.createNftInputDesc {
   position: relative;
-  top: 60px;
-  left: -455px;
+  margin-left: 250px;
+  border-radius: 5px;
+  bottom: 40px;
+  font-size: 17px;
+  color: black;
+  height: 100px;
+  width: 450px;
+  opacity: 0.4;
+  border-color: gray;
+  border-width: 1px;
 }
-.createNftButton{
+.createNftContractAddress {
+  position: relative;
+  margin-left: 250px;
+  font-size: 15px;
+  bottom: 30px;
+}
+.createNftInputContract {
+  position: relative;
+  margin-left: 250px;
+  border-radius: 5px;
+  bottom: 60px;
+  font-size: 17px;
+  color: black;
+  height: 35px;
+  width: 450px;
+  opacity: 0.4;
+  border-color: gray;
+  border-width: 1px;
+}
+.sterricCA {
+  position: relative;
+  margin-left: 130px;
+  bottom: 30px;
+  color: crimson;
+}
+.createNftButton {
+  position: relative;
+  top: 50px;
+  left: -455px;
   width: 150px;
   font-size: 12px;
   height: 40px;
-  background-color: #3AAFA9;
-  color: #FFFFFF;
+  background-color: #3aafa9;
+  color: #ffffff;
   padding: 10px;
   border-radius: 5px;
   border: none;
 }
-
-
+.createNftButton:disabled,
+.createNftButton[disabled] {
+  background-color: rgba(58, 175, 169, 0.4);
+  cursor: auto;
+}
