@@ -97,7 +97,7 @@ function Dashboard() {
             </div>
             {loadingNft ? <div className='nftLoading' > <img src={NFTConnects} alt="" /> </div> :
                 <div>
-                    <ImageSlider nfts={nfts} loading={loadingNft} listings={listings} />
+                    <ImageSlider  nfts={nfts} loading={loadingNft} listings={listings} />
                     <div className='nft-chart' >
                         <button className='btn-heading' onClick={trendBtn} style={{ background: !isSelectedTrend ? 'none' : 'gray' }} >Trending</button>
                         <button className='btn-heading' onClick={topBtn} style={{ background: !isSelectedTop ? 'none' : 'gray' }} >Top</button>

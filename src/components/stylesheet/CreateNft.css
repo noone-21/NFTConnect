@@ -141,6 +141,7 @@
 }
 .createNftInputDesc {
   position: relative;
+  text-align:initial;
   margin-left: 250px;
   border-radius: 5px;
   bottom: 40px;

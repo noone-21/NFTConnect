@@ -108,8 +108,7 @@ function CreateNft() {
         <p className='sterric' >*</p>
         <p className='required' >Required fields</p>
         <h2 className='createNftImgTitle' >Image, Video, Audio, or 3D Model <p className='sterricI' >*</p> </h2>
-        <p className='imgDesc' > File types supported: JPG, PNG, GIF, SVG, MP4, WEBM, MP3, WAV, OGG, GLB, GLTF. Max size: 100 MB
-        </p>
+        <p className='imgDesc' > File types supported: JPG, PNG, GIF, SVG</p>
         <div onClick={handleImgClick} className="createNftImg">
           {image ? (
             <img className="imgLogo" src={image} alt="" />
@@ -122,7 +121,7 @@ function CreateNft() {
         <h2 className='createNftDesc' >Description </h2>
         <p className='DescInfo' > The description will be included on the item's detail page underneath its image. <a href="https://www.markdownguide.org/cheat-sheet/"> Markdown syntax</a> <br /> is supported.
         </p>
-        <input onChange={handleNftDescriptionChange} className='createNftInputDesc' type="text" value={description} />
+        <input onChange={handleNftDescriptionChange} height={50} className='createNftInputDesc' type="text" value={description} />
         <button disabled={disableBtn} onClick={handleMintNft} className="createNftButton">Create NFT</button>
       </div>
     </>

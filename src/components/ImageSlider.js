@@ -26,14 +26,13 @@ function ImageSlider(props) {
         else {
             setIsListed(false)
         }
-        // for (const listing of props.listings) {
-        //   if (listing.asset.id === props.nftItem.id) {
-        //     setIsListed(true);
-        //     setPrice(listing.currencyValuePerToken.displayValue);
-        //     break;
-        //   }
-        // }
-    }, [currentImageIndex, listings, nfts]);
+        setFilteredNFTs(nfts.filter((Nft) => {
+            return Nft.metadata.image !== null && Nft.owner !== '0x0000000000000000000000000000000000000000';
+        }))
+        if (Boolean(filteredNFTs)) {
+            setIsFilteredNFTs(true)
+        }
+    }, [listings]);
 
 
 
@@ -66,7 +65,7 @@ function ImageSlider(props) {
         else {
             setCurrentImageIndex(currentImageIndex + 1)
         }
-    }, 100000);
+    }, 10000);
 
 
     const [isSelected1, setIsSelected1] = useState(true);
@@ -133,19 +132,6 @@ function ImageSlider(props) {
         setIsSelected5(false);
         setIsSelected6(false);
     };
-    useEffect(() => {
-        if (!nfts) {
-            return
-        }
-
-        setFilteredNFTs(nfts.filter((Nft) => {
-            // Condition to skip certain numbers
-            return Nft.metadata.image !== null&&Nft.owner!=='0x0000000000000000000000000000000000000000';
-        }))
-        if(Boolean(filteredNFTs)){
-            setIsFilteredNFTs(true)
-        }
-    }, [nfts,filteredNFTs])
 
 
     return (
